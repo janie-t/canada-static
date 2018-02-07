@@ -9,3 +9,11 @@
 ##React Static##
 
 Check out their Github repo here: https://github.com/nozzle/react-static
+
+##Development##
+
+Set up routes in static.config.js
+
+Entry is from App.js
+
+src > containers holds the separate pages
