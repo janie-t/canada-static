@@ -1,3 +1,7 @@
-# TYP V3 - Marketing Site #
+#TYP V3 Marketing Site#
 
-Made with React Static.
+##Getting started##
+
+-   yarn start - Start the development server
+-   yarn build - Build for production
+-   yarn serve - Test a production build locally
