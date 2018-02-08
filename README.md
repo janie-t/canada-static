@@ -17,3 +17,12 @@ Set up routes in static.config.js
 Entry is from App.js
 
 src > containers holds the separate pages
+
+##Bitbucket##
+Hosting Multiple Projects Under a Single Website
+You may have multiple projects that you want to host from the same Bitbucket websites, you can do this by placing each project in a repository subdirectory. In this example, you would want to organize things such that you can point users to:
+
+https://accountname.bitbucket.io/subdir1forproject1
+https://accountname.bitbucket.io/subdir2forproject2
+https://accountname.bitbucket.io/subdir3forproject3
+Each project sub-directory would act as a self-contained website with its own index.html.
