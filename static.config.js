@@ -12,8 +12,20 @@ export default {
         component: 'src/containers/Home',
       },
       {
+        path: '/plans-and-pricing',
+        component: 'src/containers/Plans',
+      },
+      {
+        path: '/how-it-works',
+        component: 'src/containers/How',
+      },
+      {
         path: '/about',
         component: 'src/containers/About',
+      },
+      {
+        path: '/contact',
+        component: 'src/containers/Contact',
       },
       {
         path: '/blog',
