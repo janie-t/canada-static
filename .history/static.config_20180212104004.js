@@ -14,11 +14,11 @@ export default {
         component: "src/containers/Home"
       },
       {
-        path: "/plans",
+        path: "/PlansAndPricing",
         component: "src/containers/Plans"
       },
       {
-        path: "/how",
+        path: "/HowItWorks",
         component: "src/containers/How"
       },
       {
