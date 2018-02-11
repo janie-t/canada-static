@@ -10,7 +10,7 @@
     "serve": "serve dist -p 3000",
     "lint": "eslint \"app/**/*.js\"",
     "git:add": "git add .",
-    "git:cz": "git cz",
+    "git:cz": "git-cz",
     "cz": "npm-run-all lint git:add git:cz"
   },
   "dependencies": {
@@ -25,7 +25,6 @@
   "devDependencies": {
     "eslint": "^4.17.0",
     "npm-run-all": "^4.1.2",
-    "serve": "^6.1.0",
-    "cz-conventional-changelog": "^2.1.0"
+    "serve": "^6.1.0"
   }
 }

@@ -10,7 +10,7 @@
     "serve": "serve dist -p 3000",
     "lint": "eslint \"app/**/*.js\"",
     "git:add": "git add .",
-    "git:cz": "git cz",
+    "git:cz": "git-cz",
     "cz": "npm-run-all lint git:add git:cz"
   },
   "dependencies": {
