@@ -13,21 +13,23 @@ const Container = styled.div(props => ({
 const Top = styled.div`
   background: #8dc63f;
   height: 700px;
-  padding: 2em;
+  padding-top: 2em;
 `;
 
 const Row = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  margin-top: 1em;
 `;
 
 const Col1 = styled.div`
   width: 50%;
-`
+`;
 
 const Col2 = styled.div`
   width: 20%;
-`
+`;
 
 const Info = styled.div`
   font-size: 2em;
@@ -68,6 +70,10 @@ const Author = styled.div`
   margin-top: 10px;
 `;
 
+const Span = styled.span`
+  width: 85%;
+`;
+
 const Middle = styled.div`
   background: orange;
 `;
@@ -82,16 +88,13 @@ export default withSiteData(() => (
       <Row>
         <Col1>
           <Info>
-            We are a fast-growing New Zealand payroll company. Our service is easy to use, and we are still free for small businesses.
+            We are a fast-growing New Zealand payroll company. Our service is
+            easy to use, and we are still free for small businesses.
           </Info>
         </Col1>
         <Col2>
-          <Signup>
-            SIGN UP NOW
-          </Signup>
-          <Contact>
-            Contact us for a chat
-          </Contact>
+          <Signup>SIGN UP NOW</Signup>
+          <Contact>Contact us for a chat</Contact>
         </Col2>
       </Row>
       <Row>
@@ -100,12 +103,12 @@ export default withSiteData(() => (
           productive book work. Thank you!<br />
           <Author>Scott Patterson, Puraty Limited</Author>
         </Quote>
-        <img src={chevronNext} alt='next' />
+        <img src={chevronNext} alt="next" />
       </Row>
       <Row>
-        <img src={typDash} alt='dashboard' />
+        <Span />
+        <img src={typDash} alt="dashboard" />
       </Row>
-
     </Top>
 
     <Middle>
