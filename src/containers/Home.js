@@ -4,6 +4,7 @@ import styled from "react-emotion";
 //
 import chevronNext from "../img/chevron-next.svg";
 import typDash from "../img/typ-dash.png";
+import homeDog from "../img/dog1.png";
 
 const Container = styled.div(props => ({
   display: "flex",
@@ -106,7 +107,9 @@ export default withSiteData(() => (
         <img src={chevronNext} alt="next" />
       </Row>
       <Row>
+        <img src={homeDog} alt="dog" />
         <Span />
+
         <img src={typDash} alt="dashboard" />
       </Row>
     </Top>
