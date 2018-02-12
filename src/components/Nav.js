@@ -55,9 +55,7 @@ export default withSiteData(() => (
       <Link
         to="/how"
         style={{
-          paddingRight: "15px",
-          textDecoration: "none",
-          color: "#009edb"
+          paddingRight: "15px"
         }}
       >
         How it works
@@ -65,9 +63,7 @@ export default withSiteData(() => (
       <Link
         to="/about"
         style={{
-          paddingRight: "15px",
-          textDecoration: "none",
-          color: "#009edb"
+          paddingRight: "15px"
         }}
       >
         About us
@@ -75,9 +71,7 @@ export default withSiteData(() => (
       <Link
         to="/contact"
         style={{
-          paddingRight: "15px",
-          textDecoration: "none",
-          color: "#009edb"
+          paddingRight: "15px"
         }}
       >
         Contact
