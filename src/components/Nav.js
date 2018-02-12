@@ -32,19 +32,54 @@ export default withSiteData(() => (
   <Nav>
     <Img src={logoImg} alt="logo" />
     <NavLinks>
-      <Link to="/" style={{ paddingRight: "15px" }}>
+      <Link
+        to="/"
+        style={{
+          paddingRight: "15px",
+          textDecoration: "none",
+          color: "#009edb"
+        }}
+      >
         Home
       </Link>
-      <Link to="/plans" style={{ paddingRight: "15px" }}>
+      <Link
+        to="/plans"
+        style={{
+          paddingRight: "15px",
+          textDecoration: "none",
+          color: "#009edb"
+        }}
+      >
         Plans and Pricing
       </Link>
-      <Link to="/how" style={{ paddingRight: "15px" }}>
+      <Link
+        to="/how"
+        style={{
+          paddingRight: "15px",
+          textDecoration: "none",
+          color: "#009edb"
+        }}
+      >
         How it works
       </Link>
-      <Link to="/about" style={{ paddingRight: "15px" }}>
+      <Link
+        to="/about"
+        style={{
+          paddingRight: "15px",
+          textDecoration: "none",
+          color: "#009edb"
+        }}
+      >
         About us
       </Link>
-      <Link to="/contact" style={{ paddingRight: "15px" }}>
+      <Link
+        to="/contact"
+        style={{
+          paddingRight: "15px",
+          textDecoration: "none",
+          color: "#009edb"
+        }}
+      >
         Contact
       </Link>
     </NavLinks>
