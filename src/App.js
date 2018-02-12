@@ -5,16 +5,19 @@ import styled from 'react-emotion'
 
 import Nav from './components/Nav'
 
-const Container = styled('div')`
+const Body = styled.body`
+  font-family: "Adelle Sans";
+  font-weight: 300;
+  font-size: 16px;
   margin: 0;
   padding: 0;
 `
 
 export default () => (
   <Router>
-    <Container>
+    <Body>
       <Nav />
       <Routes />
-    </Container>
+    </Body>
   </Router>
 )

@@ -18,13 +18,13 @@ const Button = styled.button`
 `;
 
 const Img = styled.img`
-  width: 100px;
   alignself: flex-start;
-  flex: 0.5;
+  flex: 0.2;
 `;
 
 const NavLinks = styled.div`
-  padding: 1rem;
+  padding-top: 1.2rem;
+  padding-left: 3rem;
   flex: 1;
 `;
 

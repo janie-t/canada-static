@@ -2,7 +2,8 @@ import React from "react";
 import { withSiteData } from "react-static";
 import styled from "react-emotion";
 //
-import logoImg from "../img/logo.png";
+import chevronNext from "../img/chevron-next.svg";
+import typDash from "../img/typ-dash.png";
 
 const Container = styled.div(props => ({
   display: "flex",
@@ -11,17 +12,24 @@ const Container = styled.div(props => ({
 
 const Top = styled.div`
   background: #8dc63f;
-  height: 500px;
+  height: 700px;
   padding: 2em;
 `;
 
 const Row = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 `;
 
-const Info = styled.div`
+const Col1 = styled.div`
   width: 50%;
+`
+
+const Col2 = styled.div`
+  width: 20%;
+`
+
+const Info = styled.div`
   font-size: 2em;
   padding-bottom: 1em;
   border-bottom: 2px solid #bbe582;
@@ -32,14 +40,17 @@ const Signup = styled.button`
   background-color: #009edb;
   color: white;
   height: 50px;
+  width: 250px;
   font-size: 1.3em;
+  margin-bottom: 20px;
 `;
 
 const Contact = styled.button`
-  background-color: none;
+  background-color: #8dc63f;
   color: white;
   height: 50px;
-  font-size: 1.5em;
+  width: 250px;
+  font-size: 1.3em;
 `;
 
 const Quote = styled.div`
@@ -52,8 +63,9 @@ const Quote = styled.div`
 const Author = styled.div`
   width: 100%;
   color: #bbe582;
-  font-size: 0.5em;
+  font-size: 0.7em;
   text-transform: uppercase;
+  margin-top: 10px;
 `;
 
 const Middle = styled.div`
@@ -68,11 +80,19 @@ export default withSiteData(() => (
   <Container>
     <Top>
       <Row>
-        <Info>
-          We are a fast-growing New Zealand payroll company. Our service is easy
-          to use, and we are still free for small businesses.
-        </Info>
-        <Signup>SIGN UP NOW</Signup>
+        <Col1>
+          <Info>
+            We are a fast-growing New Zealand payroll company. Our service is easy to use, and we are still free for small businesses.
+          </Info>
+        </Col1>
+        <Col2>
+          <Signup>
+            SIGN UP NOW
+          </Signup>
+          <Contact>
+            Contact us for a chat
+          </Contact>
+        </Col2>
       </Row>
       <Row>
         <Quote>
@@ -80,7 +100,12 @@ export default withSiteData(() => (
           productive book work. Thank you!<br />
           <Author>Scott Patterson, Puraty Limited</Author>
         </Quote>
+        <img src={chevronNext} alt='next' />
       </Row>
+      <Row>
+        <img src={typDash} alt='dashboard' />
+      </Row>
+
     </Top>
 
     <Middle>
