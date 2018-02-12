@@ -2,9 +2,11 @@
 
 ##Getting started##
 
--   yarn start - Start the development server
--   yarn build - Build for production
--   yarn serve - Test a production build locally
+* npm install / yarn install
+
+* yarn start - Start the development server. Access the site at http://localhost:3000
+* yarn build - Build for production
+* yarn serve - Test a production build locally
 
 ##React Static##
 

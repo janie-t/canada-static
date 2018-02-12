@@ -1,21 +1,20 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
-//
+import { Router } from 'react-static'
 import Routes from 'react-static-routes'
+import styled from 'react-emotion'
 
-import './app.css'
+import Nav from './components/Nav'
+
+const Container = styled('div')`
+  margin: 0;
+  padding: 0;
+`
 
 export default () => (
   <Router>
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-      </nav>
-      <div className="content">
-        <Routes />
-      </div>
-    </div>
+    <Container>
+      <Nav />
+      <Routes />
+    </Container>
   </Router>
 )
