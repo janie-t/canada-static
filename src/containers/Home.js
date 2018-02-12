@@ -5,6 +5,7 @@ import styled from "react-emotion";
 import chevronNext from "../img/chevron-next.svg";
 import typDash from "../img/typ-dash.png";
 import homeDog from "../img/dog1.png";
+import team from "../img/team.png";
 
 const Container = styled.div(props => ({
   display: "flex",
@@ -13,7 +14,7 @@ const Container = styled.div(props => ({
 
 const Top = styled.div`
   background: #8dc63f;
-  height: 700px;
+  height: 800px;
   padding-top: 2em;
 `;
 
@@ -76,7 +77,41 @@ const Span = styled.span`
 `;
 
 const Middle = styled.div`
-  background: orange;
+  background: #817478;
+  height: 500px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  background-image: url(${team});
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+const MainText = styled.div`
+  width: 100%;
+  max-height: 15%;
+  background: #453e40;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 1.3em;
+  padding-bottom: 1em;
+  border-bottom: solid white 1px;
+  opacity: 0.8;
+`;
+
+const SubText = styled.div`
+  width: 100%;
+  height: 10%;
+  background: #453e40;
+  color: white;
+  font-size: 1.3em;
+  padding-top: 1em;
+  opacity: 0.8;
 `;
 
 const Bottom = styled.div`
@@ -115,7 +150,11 @@ export default withSiteData(() => (
     </Top>
 
     <Middle>
-      <h1>Middle Section</h1>
+      <MainText>We have a really great support team.</MainText>
+      <SubText>
+        We are proud of these humans in the Wellington office. Our customers
+        love them. Link to new content >
+      </SubText>
     </Middle>
     <Bottom>
       <h1>Bottom Section</h1>
