@@ -3,7 +3,7 @@ import { Section, Container } from '../commons';
 
 const Landing = () => (
   <Section>
-    <Container>LALA</Container>
+    <Container>LALALAAANDIING</Container>
   </Section>
 );
 

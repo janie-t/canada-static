@@ -1,10 +1,10 @@
 import React from 'react';
 import { Section, Container } from '../commons';
 
-const Features = () => (
+const Support = () => (
   <Section>
-    <Container>Features!</Container>
+    <Container>Support Team!</Container>
   </Section>
 );
 
-export default Features;
+export default Support;

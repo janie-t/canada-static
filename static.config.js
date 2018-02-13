@@ -1,4 +1,3 @@
-import { resolve } from 'path';
 import fetch from 'node-fetch';
 
 const getPage = component => `src/pages/${component}`;
