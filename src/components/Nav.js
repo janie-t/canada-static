@@ -36,14 +36,19 @@ const Nav = styled.div`
 const Login = styled.div`
   position: absolute;
   right: 0px;
-  margin: 0.5em 0.5em;
   color: #009edb;
-  height: 30px;
-  width: 70px;
-  font-size: 1.5em;
   border: solid 1px #009edb;
   text-align: center;
   border-radius: 5px;
+  margin: 1em 2em;
+  padding: 3px;
+  height: 20px;
+  ${mq.medium(css`
+    margin: 0.5em 0.5em;
+    height: 30px;
+    width: 70px;
+    font-size: 1.5em;
+  `)};
 `;
 
 const Img = css`
@@ -70,7 +75,9 @@ const NavLinks = styled.div`
 
 export default withSiteData(() => (
   <Nav>
-    <img src={logoImg} alt="logo" className={Img} />
+    <Link to="/">
+      <img src={logoImg} alt="logo" className={Img} />
+    </Link>
     <NavLinks>
       <Link
         to="/"

@@ -66,45 +66,79 @@ const Row = styled.div`
 `;
 
 const Col1 = styled.div`
-  max-width: 40%;
-  margin-left: 5em;
+  max-width: 50%;
+  margin-left: 2em;
+  ${mq.medium(css`
+    max-width: 40%;
+    margin-left: 5em;
+  `)};
 `;
 
 const Col2 = styled.div`
-  max-width: 15%;
-  margin-right: 4em;
+  max-width: 30%;
+  margin-right: 1em;
+  ${mq.medium(css`
+    max-width: 40%;
+    margin-right: 6em;
+  `)};
 `;
 
 const Info = styled.div`
-  font-size: 2em;
-  padding-bottom: 1em;
-  border-bottom: 2px solid #bbe582;
-  margin-bottom: 1.5em;
+  font-size: 1.1em;
+  padding-top: 2em;
+  ${mq.medium(css`
+    font-size: 2em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #bbe582;
+    margin-bottom: 1.5em;
+  `)};
 `;
 
-const Signup = styled.button`
+const Signup = styled.div`
+  margin-top: 2em;
   background-color: #009edb;
   color: white;
-  height: 50px;
-  width: 250px;
-  font-size: 1.3em;
-  margin-bottom: 20px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+  ${mq.medium(css`
+    height: 50px;
+    width: 250px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  `)};
 `;
 
-const Contact = styled.button`
-  background-color: #8dc63f;
+const Contact = styled.div`
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 2em;
+  text-align: center;
   color: white;
-  height: 50px;
-  width: 250px;
-  font-size: 1.3em;
+  height: 30px;
+  width: 100px;
+  border: 1px solid white;
+  ${mq.medium(css`
+    height: 50px;
+    width: 250px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  `)};
 `;
 
 const Quote = styled.div`
-  max-width: 30%;
+  max-width: 40%;
   color: white;
   font-weight: bold;
-  font-size: 1.6em;
-  margin-left: 6em;
+  margin-left: 3em;
+  margin-top: 2em;
+  ${mq.medium(css`
+    max-width: 30%;
+    font-size: 1.6em;
+    margin-left: 6em;
+  `)};
 `;
 
 const Author = styled.div`
@@ -115,42 +149,85 @@ const Author = styled.div`
   margin-top: 10px;
 `;
 
+const chevron = css`
+  margin-right: 2em;
+  margin-bottom: 1em;
+  width: 50px;
+  ${mq.medium(css`
+    width: 100px;
+    margin-right: 5em;
+    margin-bottom: 3em;
+  `)};
+`;
+
+const dog = css`
+  width: 120px;
+  height: 200px;
+  ${mq.medium(css`
+    width: 300px;
+    height: 350px;
+  `)};
+`;
+
+const dash = css`
+  width: 200px;
+  height: 200px;
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+  ${mq.medium(css`
+    height: 350px;
+    width: 450px;
+  `)};
+`;
+
 const Middle = styled.div`
   background: #817478;
-  height: 500px;
-  padding-top: 2em;
-  padding-bottom: 2em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   text-align: center;
+  align-items: center;
+  text-align: center;
   background-image: url(${team});
   background-repeat: no-repeat;
   background-position: center;
+  height: 500px;
+  ${mq.medium(css`
+    padding-top: 2em;
+    padding-bottom: 2em;
+  `)};
 `;
 
 const MainText = styled.div`
   width: 100%;
-  max-height: 15%;
   background: #453e40;
   color: white;
+  font-size: 1.5em;
   font-weight: bold;
-  font-size: 2em;
-  padding-top: 1.3em;
-  padding-bottom: 1em;
   border-bottom: solid white 1px;
   opacity: 0.8;
+  max-height: 150px;
+  ${mq.medium(css`
+    max-height: 15%;
+    font-size: 2em;
+    padding-top: 1.3em;
+    padding-bottom: 1em;
+  `)};
 `;
 
 const SubText = styled.div`
   width: 100%;
-  height: 10%;
   background: #453e40;
   color: white;
-  font-size: 1.3em;
-  padding-top: 1em;
   opacity: 0.8;
+  font-size: 1.1em;
+  ${mq.medium(css`
+    height: 10%;
+    font-size: 1.3em;
+    padding-top: 1em;
+  `)};
 `;
 
 const Bottom = styled.div`
@@ -208,8 +285,11 @@ const Square = styled.div`
   -ms-flex-flow: column wrap;
   -o-flex-flow: column wrap;
   flex-flow: column wrap;
-  margin: 2em;
-  max-width: 15%;
+  margin: 1em;
+  ${mq.medium(css`
+    margin: 2em;
+    max-width: 15%;
+  `)};
 `;
 
 const SquareHeading = styled.div`
@@ -253,19 +333,11 @@ export default withSiteData(() => (
           productive book work. Thank you!"<br />
           <Author>Scott Patterson, Puraty Limited</Author>
         </Quote>
-        <img
-          src={chevronNext}
-          alt="next"
-          style={{ marginRight: "3em", marginBottom: "3em" }}
-        />
+        <img src={chevronNext} alt="next" className={chevron} />
       </Row>
       <Row>
-        <img src={homeDog} alt="dog" />
-        <img
-          src={typDash}
-          alt="dashboard"
-          style={{ position: "relative", right: "0px", bottom: "0px" }}
-        />
+        <img src={homeDog} alt="dog" className={dog} />
+        <img src={typDash} alt="dashboard" className={dash} />
       </Row>
     </Top>
 
