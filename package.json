@@ -13,10 +13,16 @@
     "git:cz": "git cz",
     "cz": "npm-run-all lint git:add git:cz"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "babel-plugin-emotion": "^9.0.0",
     "emotion": "^9.0.0",
+    "facepaint": "^1.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-emotion": "^9.0.0",
