@@ -1,52 +1,51 @@
-import axios from "axios";
+import { resolve } from 'path';
+import fetch from 'node-fetch';
+
+const getPage = component => `src/pages/${component}`;
+const getRoute = (path, component, options = {}) => ({
+  path,
+  component: getPage(component),
+  ...options,
+});
 
 export default {
-  getSiteData: () => ({
-    title: "React Static"
-  }),
+  webpack: (config, { defaultLoaders }) => {
+    const rules = [
+      {
+        oneOf: [
+          defaultLoaders.jsLoader,
+          defaultLoaders.cssLoader,
+          {
+            loader: ['json-loader', 'yaml-loader'],
+            test: /\.ya?ml$/i,
+          },
+          defaultLoaders.fileLoader,
+        ],
+      },
+    ];
+    return { ...config, module: { ...config.module, rules } };
+  },
+  getSiteData: () => ({ title: 'Thankyou Payroll' }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
+    const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then(async res =>
+      res.json());
     return [
-      {
-        path: "/",
-        component: "src/containers/Home"
-      },
-      {
-        path: "/plans",
-        component: "src/containers/Plans"
-      },
-      {
-        path: "/how",
-        component: "src/containers/How"
-      },
-      {
-        path: "/about",
-        component: "src/containers/About"
-      },
-      {
-        path: "/contact",
-        component: "src/containers/Contact"
-      },
-      {
-        path: "/blog",
-        component: "src/containers/Blog",
-        getData: () => ({
-          posts
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: "src/containers/Post",
-          getData: () => ({
-            post
-          })
-        }))
-      },
+      getRoute('/', 'Home'),
+      getRoute('/plans', '404'),
+      getRoute('/how', '404'),
+      getRoute('/about', '404'),
+      getRoute('/contact', '404'),
+      getRoute('/blog', '404', {
+        getData: () => ({ posts }),
+        children: posts.map(post =>
+          getRoute(`/post/${post.id}`, '404', {
+            getData: () => ({ post }),
+          })),
+      }),
       {
         is404: true,
-        component: "src/containers/404"
-      }
+        component: getPage('404'),
+      },
     ];
-  }
+  },
 };
