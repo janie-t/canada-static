@@ -15,23 +15,25 @@ const Container = styled.div(props => ({
 
 const Top = styled.div`
   background: #8dc63f;
-  height: 800px;
-  padding-top: 2em;
+  padding-top: 4em;
 `;
 
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 1em;
+  margin: auto;
 `;
 
 const Col1 = styled.div`
-  width: 50%;
+  max-width: 40%;
+  margin-left: 5em;
 `;
 
 const Col2 = styled.div`
-  width: 20%;
+  max-width: 15%;
+  margin-right: 4em;
 `;
 
 const Info = styled.div`
@@ -59,10 +61,11 @@ const Contact = styled.button`
 `;
 
 const Quote = styled.div`
-  width: 50%;
+  max-width: 30%;
   color: white;
   font-weight: bold;
   font-size: 1.6em;
+  margin-left: 6em;
 `;
 
 const Author = styled.div`
@@ -71,10 +74,6 @@ const Author = styled.div`
   font-size: 0.7em;
   text-transform: uppercase;
   margin-top: 10px;
-`;
-
-const Span = styled.span`
-  width: 85%;
 `;
 
 const Middle = styled.div`
@@ -141,12 +140,13 @@ const GridRow = styled.div`
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  justify-content: center;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   -o-flex-direction: row;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
   margin: auto;
 `;
 
@@ -169,7 +169,8 @@ const Square = styled.div`
   -ms-flex-flow: column wrap;
   -o-flex-flow: column wrap;
   flex-flow: column wrap;
-  margin: 1em;
+  margin: 2em;
+  max-width: 15%;
 `;
 
 const SquareHeading = styled.div`
@@ -200,17 +201,23 @@ export default withSiteData(() => (
       </Row>
       <Row>
         <Quote>
-          We can now spend more time on building the business rather than non
-          productive book work. Thank you!<br />
+          "We can now spend more time on building the business rather than non
+          productive book work. Thank you!"<br />
           <Author>Scott Patterson, Puraty Limited</Author>
         </Quote>
-        <img src={chevronNext} alt="next" />
+        <img
+          src={chevronNext}
+          alt="next"
+          style={{ marginRight: "3em", marginBottom: "3em" }}
+        />
       </Row>
       <Row>
         <img src={homeDog} alt="dog" />
-        <Span />
-
-        <img src={typDash} alt="dashboard" />
+        <img
+          src={typDash}
+          alt="dashboard"
+          style={{ position: "relative", right: "0px", bottom: "0px" }}
+        />
       </Row>
     </Top>
 

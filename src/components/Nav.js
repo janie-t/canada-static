@@ -19,12 +19,12 @@ const Button = styled.button`
 
 const Img = styled.img`
   alignself: flex-start;
-  flex: 0.2;
+  flex: 0.1;
 `;
 
 const NavLinks = styled.div`
   padding-top: 1.2rem;
-  padding-left: 3rem;
+  margin-left: 3em;
   flex: 1;
 `;
 
