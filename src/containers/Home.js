@@ -1,6 +1,6 @@
 import React from "react";
-import { withSiteData } from "react-static";
-import styled from "react-emotion";
+import { withSiteData, Link } from "react-static";
+import styled, { css } from "react-emotion";
 //
 import chevronNext from "../img/chevron-next.svg";
 import typDash from "../img/typ-dash.png";
@@ -8,14 +8,53 @@ import homeDog from "../img/dog1.png";
 import team from "../img/team.png";
 import lightning from "../img/lightning.png";
 
+const breakpoints = {
+  // Numerical values will result in a min-width query
+  small: 576,
+  medium: 768,
+  large: 992,
+  xLarge: 1200,
+  // String values will be used as is
+  tallPhone: "(max-width: 360px) and (min-height: 740px)"
+};
+
+const mq = Object.keys(breakpoints).reduce((accumulator, label) => {
+  let prefix = typeof breakpoints[label] === "string" ? "" : "min-width:";
+  let suffix = typeof breakpoints[label] === "string" ? "" : "px";
+  accumulator[label] = cls =>
+    css`
+      @media (${prefix + breakpoints[label] + suffix}) {
+        ${cls};
+      }
+    `;
+  return accumulator;
+}, {});
+
 const Container = styled.div(props => ({
   display: "flex",
   flexDirection: "column"
 }));
 
+const MobLinks = css`
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding-right: 20px;
+  }
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  border-bottom: 2px solid #009edb;
+  padding-bottom: 0.5em;
+  ${mq.medium(css`
+    display: none;
+  `)};
+`;
+
 const Top = styled.div`
   background: #8dc63f;
-  padding-top: 4em;
+  padding-top: 1em;
 `;
 
 const Row = styled.div`
@@ -187,6 +226,15 @@ const SquareSubheading = styled.div`
 export default withSiteData(() => (
   <Container>
     <Top>
+      <Row>
+        <div className={MobLinks}>
+          <Link to="/">Home</Link>
+          <Link to="/plans">Plans and Pricing</Link>
+          <Link to="/how">How it works</Link>
+          <Link to="/about">About us</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+      </Row>
       <Row>
         <Col1>
           <Info>
