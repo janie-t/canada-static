@@ -1,6 +1,6 @@
 import React from 'react';
 import { withSiteData, Link } from 'react-static';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import background1 from '../../assets/images/background1.png';
 import next from '../../assets/images/arrow-right.png';
 import content from '../../content';
@@ -64,26 +64,41 @@ const Author = styled.div`
   margin-left: 2em;
 `;
 
-const Signup = styled.div`
-  margin-top: 2em;
-  background-color: #009edb;
-  color: white;
-  height: 30px;
-  width: 100px;
-  text-align: center;
-  padding: 5px;
-  border-radius: 4px;
+const ActionButtons = styled.div`
+  font-size: 1.2em;
+  padding-top: 3.5em;
+  padding-left: 2em;
+  text-align: right;
 `;
 
-const Contact = styled.div`
-  padding: 5px;
-  border-radius: 4px;
-  margin-top: 2em;
-  text-align: center;
-  color: white;
-  height: 30px;
-  width: 100px;
-  border: 1px solid white;
+const Signup = styled.button`
+background: ${colors.DARKBLUE};
+color: white;
+text-transform: uppercase;
+padding: 1rem 2rem;
+margin-bottom: 1em;
+transition: background-color 200ms ease, color 200ms ease;
+&:hover {
+  background-color: white;
+  color: ${colors.DARKBLUE};
+  border: 1px solid #009edb;
+}
+width: 60%;
+border-radius: 5px;
+`;
+
+const Contact = styled.button`
+background: transparent;
+color: white;
+padding: 1rem 2rem;
+border: 1px solid white;
+transition: background-color 200ms ease, color 200ms ease;
+&:hover {
+  background-color: white;  
+  color: ${colors.DARKBLUE};
+}
+width: 60%;
+border-radius: 5px;
 `;
 
 const Landing = () => (
@@ -98,7 +113,12 @@ const Landing = () => (
           </Row>
           <Author>{HOME.author}</Author>
         </div>
-        <div className={CLASSES.halfCol}>SIGNUP BUTTON</div>
+        <div className={CLASSES.halfCol}>
+          <ActionButtons>
+            <Signup>Sign up now</Signup>
+            <Contact>Contact Us</Contact>
+          </ActionButtons>
+        </div>
       </Container>
     </Background>
   </Section>
