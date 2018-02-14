@@ -6,7 +6,7 @@ const Section = styled.section`
 
 const Container = styled.div`
   max-width: 970px;
-  margin: 0 auto;
+  margin: 1rem auto;
 `;
 
 export { Section, Container };

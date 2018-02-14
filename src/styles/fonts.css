@@ -1,22 +1,28 @@
 @font-face {
-  font-family: 'Adelle Sans';
-  src: url('../assets/fonts/AdelleSans.otf');
+  font-family: "Adelle Sans";
+  src: url("../assets/fonts/AdelleSans.otf");
 }
 
 @font-face {
-  font-family: 'Adelle Sans';
-  src: url('../assets/fonts/AdelleSans-Bold.otf');
+  font-family: "Adelle Sans";
+  src: url("../assets/fonts/AdelleSansLt.otf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Adelle Sans";
+  src: url("../assets/fonts/AdelleSans-Bold.otf");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'Adelle Sans';
-  src: url('../assets/fonts/AdelleSans-Italic.otf');
+  font-family: "Adelle Sans";
+  src: url("../assets/fonts/AdelleSans-Italic.otf");
   font-style: italic;
 }
 @font-face {
-  font-family: 'Adelle Sans';
-  src: url('../assets/fonts/AdelleSans-BoldItalic.otf');
+  font-family: "Adelle Sans";
+  src: url("../assets/fonts/AdelleSans-BoldItalic.otf");
   font-weight: bold;
   font-style: italic;
 }

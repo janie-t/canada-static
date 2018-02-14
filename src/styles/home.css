@@ -1,0 +1,29 @@
+@import url("./vendor/pure-min.css");
+@import url("./vendor/grids-responsive-min.css");
+@import url("./fonts.css");
+
+.background {
+  background-image: url("../assets/images/background1-low-res.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 1;
+  width: 100%;
+  height: 800px;
+}
+.col1 {
+  background: grey;
+  height: 300px;
+}
+.intro {
+  font-size: 2em;
+  font-weight: lighter;
+  margin-bottom: 2em;
+  border-bottom: 1px solid white;
+}
+.quote {
+  color: white;
+  font-style: bold;
+}
+.col2 {
+  background: brown;
+}
