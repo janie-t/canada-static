@@ -8,20 +8,17 @@ import colors from '../../styles/colors';
 import { Section, Container } from '../commons';
 
 const CLASSES = {
-  section: 'pure-g',
-  container: 'pure-u-0 pure-u-sm-1 pure-u-md-1 pure-u-lg-1 pure-u-xl-1',
-  button: 'pure-button pure-button-primary',
   halfCol: 'pure-u-1-2',
 };
 
 const HOME = content('pages.home');
 
 const Background = styled.div`
+  flex: 1;
   background-image: url(${background1});
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 1;
-  width: 100%;
   height: 700px;
 `;
 
