@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'react-emotion';
-
 import { Section, Container } from '../commons';
 
 import background2 from '../../assets/images/background2.png';
