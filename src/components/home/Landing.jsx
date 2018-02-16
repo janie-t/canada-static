@@ -19,7 +19,7 @@ const Background = styled.div`
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 1;
-  height: 700px;
+  height: 650px;
 `;
 
 const Intro = styled.div`
