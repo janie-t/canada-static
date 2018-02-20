@@ -20,7 +20,7 @@ Entry is from App.js
 
 src > containers holds the separate pages
 
-Components hold their specific styling.
+To use an image in a component, export it first via assets > index.js
 
 ##Bitbucket##
 Hosting Multiple Projects Under a Single Website
@@ -30,5 +30,3 @@ https://accountname.bitbucket.io/subdir1forproject1
 https://accountname.bitbucket.io/subdir2forproject2
 https://accountname.bitbucket.io/subdir3forproject3
 Each project sub-directory would act as a self-contained website with its own index.html.
-
-

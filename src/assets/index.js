@@ -1,7 +1,7 @@
 import logo from './images/logo.png';
 import typDash from './images/typ-dash.png';
 import homeDog from './images/dog1.png';
-import lightning from './images/lightning.png';
+import bolt from './images/bolt.png';
 
 const Images = {
   logo,
@@ -9,7 +9,7 @@ const Images = {
   homeDog,
 };
 const Icons = {
-  lightning,
+  bolt,
 };
 
 export { Images, Icons };
