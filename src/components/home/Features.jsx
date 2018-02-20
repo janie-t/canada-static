@@ -5,6 +5,7 @@ import { map } from 'lodash';
 import content from '../../content';
 import { Section, Container } from '../commons';
 import { Icons } from '../../assets';
+import colors from '../../styles/colors';
 
 const PURECLASSES = {
   grid: 'pure-g',
@@ -14,7 +15,7 @@ const PURECLASSES = {
 const HOME = content('pages.home');
 
 const Grid = ({ items }) => (
-  <div className={PURECLASSES.grid}>
+  <FeatureGrid className={PURECLASSES.grid}>
     {map(items, ({ heading, subheading }) => (
       <Square key={heading} className={PURECLASSES.square}>
         <Icon src={Icons.bolt} alt="" />
@@ -22,8 +23,12 @@ const Grid = ({ items }) => (
         <Subheading>{subheading}</Subheading>
       </Square>
     ))}
-  </div>
+  </FeatureGrid>
 );
+
+const FeatureGrid = styled.div`
+  margin-bottom: 3em;
+`;
 
 const Square = styled.div`
   flex-direction: column;
@@ -32,7 +37,7 @@ const Square = styled.div`
   padding: 1em;
   max-width: 30%;
   text-align: center;
-  color: grey;
+  color: ${colors.LIGHTBROWN};
 `;
 
 const Icon = styled.img`
@@ -41,14 +46,14 @@ const Icon = styled.img`
 
 const Heading = styled.div`
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: 5px;
   font-weight: bold;
   opacity: 0.7;
 `;
 
 const Subheading = styled.div`
-  font-size: 0.9em;
+  font-size: 1em;
   margin-top: 5px;
 `;
 
