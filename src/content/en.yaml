@@ -18,37 +18,33 @@ pages:
     customer_quote: >
       "We can now spend more time on building the business rather than non productive book
       work. Thank you!"
-    headings: {
-      1: Easy to use,
-      2: Friendly help desk,
-      3: Calculate Leave,
-      4: File Employer Returns,
-      5: Employee Portal,
-      6: Transfer Wages,
-      7: Giving Made Simple,
-      8: 24 / 7 Access,
-      9: Good for any business
-    }
-    subheadings: {
-      1:   Our payroll platform is easy and user-friendly, and makes managing your payroll stress
-      free and lightning fast.,
-      2:   Our amazing support team always go the extra mile to help you - and it doesn't cost
-      you more to have them on hand.,
-      3:    We calculate and monitor employee leave according to the Holidays Act, helping you
-      stay on top of leave requirements.,
-      4:  We calculate all PAYE, Kiwisaver, Student loans and Child Support, and file it with
-      the IRD. We keep you compliant. We even do MoJ fines.,
-      5: Your employees can upload their own hours, get payslips, and request annual leave -
-        all you need to do is check and authorise it.,
-      6:   We pay all your employees directly, and email them payslips - you can even put your
-      business logo on them.,
-      7: It's effortless for your employees to donate regularly to their favourite charity.
-      They get an immediate tax rebate on each donation.,
-      8: Our platform is cloud-based, which means you access your payroll from anywhere,
-      anytime. All you need is a device and an internet connection.,
-      9: Payroll solutions for trades and skilled labour, business and investment, hospitality,
-      education, retail, social services and many more.
-    }
+    features:
+      - heading: Easy to use
+        subheading: Our payroll platform is easy and user-friendly, and makes managing your payroll 
+                    stress free and lightning fast.
+      - heading: Friendly help desk
+        subheading: Our amazing support team always go the extra mile to help you - and it doesn't cost
+                    you more to have them on hand.    
+      - heading: Calculate Leave
+        subheading: We calculate and monitor employee leave according to the Holidays Act, helping you
+                    stay on top of leave requirements. 
+      - heading: File Employer Returns
+        subheading: Your employees can upload their own hours, get payslips, and request annual leave -
+                    all you need to do is check and authorise it.
+      - heading: Employee Portal
+        subheading: We pay all your employees directly, and email them payslips - you can even put your
+                    business logo on them.
+      - heading: Transfer Wages
+        subheading: LALALA
+      - heading: Giving Made Simple
+        subheading: It's effortless for your employees to donate regularly to their favourite charity.
+                    They get an immediate tax rebate on each donation.
+      - heading: 24 / 7 Access
+        subheading: Our platform is cloud-based, which means you access your payroll from anywhere,
+                     anytime. All you need is a device and an internet connection.
+      - heading: Good for any business
+        subheading: Payroll solutions for trades and skilled labour, business and investment, hospitality,
+                    education, retail, social services and many more.
     author: Scott Patterson, Puraty Limited
   plans: Plans and Pricing
   how: How it works

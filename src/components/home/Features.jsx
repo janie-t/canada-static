@@ -1,6 +1,7 @@
 import React from 'react';
 import { withSiteData } from 'react-static';
 import styled, { css } from 'react-emotion';
+import { map } from 'lodash';
 import content from '../../content';
 import { Section, Container } from '../commons';
 import { Icons } from '../../assets';
@@ -12,14 +13,25 @@ const PURECLASSES = {
 
 const HOME = content('pages.home');
 
-const Grid = styled(Container)`
-  width: 100%;
-  text-align: center;
-`;
+// const Grid = styled(Container)`
+//   width: 100%;
+//   text-align: center;
+// `;
 
-const Square = styled.div`
-  background-color: white;
-  padding-top: 5px;
+const Grid = ({ items }) => (
+  <div className={PURECLASSES.grid}>
+    {map(items, ({ heading, subheading }) => (
+      <div key={heading} className={PURECLASSES.square}>
+        <Icon src={Icons.bolt} alt="" />
+        <Heading>{heading}</Heading>
+        <Subheading>{subheading}</Subheading>
+      </div>
+    ))}
+  </div>
+);
+
+const Icon = styled.img`
+  border-radius: 50%;
 `;
 
 const Heading = styled.div`
@@ -33,16 +45,12 @@ const Subheading = styled.div`
   margin-top: 5px;
 `;
 
-const Features = () => (
-  <Section>
-    <Grid className={PURECLASSES.grid}>
-      <Square className={PURECLASSES.square}>
-        <img src={Icons.bolt} alt="" />
-        <Heading>Heading</Heading>
-        <Subheading>Subheading</Subheading>
-      </Square>
-    </Grid>
-  </Section>
-);
-
-export default Features;
+export default withSiteData(() => {
+  const FEATURES = content('pages.home.features');
+  console.log(FEATURES);
+  return (
+    <Section>
+      <Grid className={PURECLASSES.grid} items={FEATURES} />
+    </Section>
+  );
+});
