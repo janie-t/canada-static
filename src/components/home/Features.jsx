@@ -13,22 +13,27 @@ const PURECLASSES = {
 
 const HOME = content('pages.home');
 
-// const Grid = styled(Container)`
-//   width: 100%;
-//   text-align: center;
-// `;
-
 const Grid = ({ items }) => (
   <div className={PURECLASSES.grid}>
     {map(items, ({ heading, subheading }) => (
-      <div key={heading} className={PURECLASSES.square}>
+      <Square key={heading} className={PURECLASSES.square}>
         <Icon src={Icons.bolt} alt="" />
         <Heading>{heading}</Heading>
         <Subheading>{subheading}</Subheading>
-      </div>
+      </Square>
     ))}
   </div>
 );
+
+const Square = styled.div`
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 1em;
+  max-width: 30%;
+  text-align: center;
+  color: grey;
+`;
 
 const Icon = styled.img`
   border-radius: 50%;
@@ -38,10 +43,12 @@ const Heading = styled.div`
   text-transform: uppercase;
   font-size: 1em;
   margin-top: 5px;
+  font-weight: bold;
+  opacity: 0.7;
 `;
 
 const Subheading = styled.div`
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-top: 5px;
 `;
 
@@ -50,7 +57,9 @@ export default withSiteData(() => {
   console.log(FEATURES);
   return (
     <Section>
-      <Grid className={PURECLASSES.grid} items={FEATURES} />
+      <Container>
+        <Grid className={PURECLASSES.grid} items={FEATURES} />
+      </Container>
     </Section>
   );
 });
