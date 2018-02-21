@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'react-emotion';
 import { Section, Container } from '../commons';
 import colors from '../../styles/colors';
-
-import background2 from '../../assets/images/background2.png';
-
+import { Images } from '../../assets';
 
 const Background = styled.div`
   display: flex;
   flex: 1;
-  background-image: url(${background2});
+  background:  url(${Images.support});
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 1;
