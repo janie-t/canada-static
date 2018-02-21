@@ -96,6 +96,17 @@ width: 60%;
 border-radius: 5px;
 `;
 
+const Roll = styled.img`
+  width: 70%;
+  bottom: 0;
+`
+const Dash = styled.img`
+  width: 30%;
+  position: relative;
+  right: 0;
+  bottom: 0;
+`
+
 const Landing = () => (
   <Section>
     <Background>
@@ -115,7 +126,8 @@ const Landing = () => (
           </ActionButtons>
         </div>
       </Container>
-      <img src={Images.ballRoll} />
+      <Roll src={Images.ballRoll} />
+      <Dash src={Images.dash} />
     </Background>
   </Section>
 );
