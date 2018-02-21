@@ -30,32 +30,31 @@ const Middle = styled.div`
     position: absolute;
     top: 50%;
     left: 0;
-    border-top: 1px solid ${colors.WHITE};
+    border-top: 1px solid;
+    border-color: ${colors.WHITE};
     width: 100 %;
-    transform: translateY(-50 %);
+    transform: translateY(-50%);
   }
   display: flex;
+  color: ${colors.WHITE};
 `;
 
 
 const MainText = styled.div`
-color: ${colors.WHITE};
-font-size: 3em;
-font-weight: bold;
-max-height: 150px;
+  font-size: 3em;
+  font-weight: bold;
+  max-height: 150px;
 `;
 
 const SubText = styled.div`
-width: 100 %;
-color: ${colors.WHITE};
-font-size: 1.6em;
-padding-top: 1em;
-opacity: 0.7;
+  width: 100 %;
+  font-size: 1.6em;
+  padding-top: 1em;
+  opacity: 0.7;
 `;
 
 const NewContent = styled.div`
-color: white;
-font-size: 1.6em;
+  font-size: 1.6em;
 `
 
 

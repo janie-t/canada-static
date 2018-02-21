@@ -78,7 +78,7 @@ transition: background-color 200ms ease, color 200ms ease;
 &:hover {
   background-color: white;
   color: ${colors.DARKBLUE};
-  border: 1px solid #009edb;
+  border: 1px solid ${colors.BLUE};
 }
 width: 60%;
 border-radius: 5px;
@@ -86,9 +86,9 @@ border-radius: 5px;
 
 const Contact = styled.button`
 background: transparent;
-color: white;
+color: ${colors.WHITE};
 padding: 1rem 2rem;
-border: 1px solid white;
+border: 1px solid ${colors.WHITE};
 transition: background-color 200ms ease, color 200ms ease;
 &:hover {
   background-color: white;  
