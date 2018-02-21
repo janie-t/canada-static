@@ -24,7 +24,7 @@ const Logo = styled.img`
   height: 82px;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(Link) `
   padding: 0;
   margin: 0 1rem;
   text-decoration: none;

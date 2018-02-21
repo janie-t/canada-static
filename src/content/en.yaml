@@ -12,8 +12,9 @@ menus:
   contact: Contact
 pages:
   home: 
-    landing_text: >
+    landing_heading: >
       We are a fast-growing New Zealand payroll company. 
+    landing_subheading: >
       Our service is easy to use, and we are still free for small businesses.
     customer_quote: >
       "We can now spend more time on building the business rather than non productive book
