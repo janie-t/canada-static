@@ -3,7 +3,6 @@ import styled from 'react-emotion';
 import { Section, Container } from '../commons';
 import colors from '../../styles/colors';
 
-
 import background2 from '../../assets/images/background2.png';
 
 

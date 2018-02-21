@@ -1,8 +1,7 @@
 import React from 'react';
 import { withSiteData, Link } from 'react-static';
 import styled from 'react-emotion';
-import background1 from '../../assets/images/background1.png';
-import next from '../../assets/images/arrow-right.png';
+import { Images } from '../../assets';
 import content from '../../content';
 import colors from '../../styles/colors';
 import { Section, Container } from '../commons';
@@ -15,12 +14,11 @@ const HOME = content('pages.home');
 
 const Background = styled.div`
   flex: 1;
-  background-image: url(${background1});
-  background-repeat: no-repeat;
   background-size: 100%;
   z-index: 1;
-  height: 650px;
-`;
+  height: 100%;
+  background:  url(${Images.homePattern}) ${colors.GREEN};
+  `;
 
 const Intro = styled.div`
   font-size: 2em;
@@ -106,7 +104,7 @@ const Landing = () => (
           <Intro>{HOME.landing_text}</Intro>
           <Row>
             <Quote>{HOME.customer_quote}</Quote>
-            <Next src={next} />
+            <Next src={Images.arrowRight} />
           </Row>
           <Author>{HOME.author}</Author>
         </div>
@@ -117,6 +115,7 @@ const Landing = () => (
           </ActionButtons>
         </div>
       </Container>
+      <img src={Images.ballRoll} />
     </Background>
   </Section>
 );
