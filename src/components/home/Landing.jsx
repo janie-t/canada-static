@@ -24,21 +24,19 @@ const Heading = styled.div`
   text-align: center;
   color: ${colors.WHITE};
   @media (min-width: 576px) {
+    color: black;
     font-size: 2em;
     padding-top: 2em;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-    border-bottom: 2px solid;
-    border-color: ${colors.LIGHTGREEN};
   }
 `;
 
 const Subheading = styled.div`
   font-size: 1em;
   text-align: center;
+  margin-top: 10px;
   @media (min-width: 576px) {
     font-size: 2em;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: 1em;
     margin-bottom: 1em;
     border-bottom: 2px solid;
@@ -110,17 +108,22 @@ border-radius: 5px;
 `;
 
 const Contact = styled.button`
+width: 90%;
+margin: auto;
 background: transparent;
-color: ${colors.WHITE};
-padding: 1rem 2rem;
-border: 1px solid ${colors.WHITE};
 transition: background-color 200ms ease, color 200ms ease;
-&:hover {
-  background-color: white;  
-  color: ${colors.DARKBLUE};
-}
-width: 60%;
+color: ${colors.WHITE};
 border-radius: 5px;
+border: 1px solid ${colors.WHITE};
+padding: 1rem 2rem;
+
+@media (min-width: 576px) {
+  &:hover {
+    background-color: white;  
+    color: ${colors.DARKBLUE};
+  }
+  width: 60%;
+}
 `;
 
 const Roll = styled.img`
