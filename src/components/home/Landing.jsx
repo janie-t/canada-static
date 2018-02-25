@@ -98,12 +98,12 @@ border-radius: 5px;
 @media (min-width: 576px) {
   background: ${colors.DARKBLUE};
   color: white;
+  width: 40%;
   &:hover {
     background-color: white;
     color: ${colors.DARKBLUE};
     border: 1px solid ${colors.BLUE};
   }
-  width: 60%;
 }
 `;
 
@@ -118,11 +118,11 @@ border: 1px solid ${colors.WHITE};
 padding: 1rem 2rem;
 
 @media (min-width: 576px) {
+  width: 40%;
   &:hover {
     background-color: white;  
     color: ${colors.DARKBLUE};
   }
-  width: 60%;
 }
 `;
 
