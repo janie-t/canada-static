@@ -5,7 +5,8 @@ import { map } from 'lodash';
 import { Images } from '../assets';
 import content from '../content';
 import colors from '../styles/colors';
-import { Section, Container } from './commons';
+import { Container } from './commons';
+
 
 const CLASSES = {
   menu: 'pure-menu pure-menu-horizontal',
@@ -18,10 +19,23 @@ const CLASSES = {
   button: 'pure-button',
 };
 
+const Section = styled.div`
+  width: 100%;
+  background-color: ${colors.GREEN};
+  height: 100px;
+  @media (min-width: 576px) {
+    background-color: ${colors.WHITE};
+    height: 150px;
+  }
+`;
+
 const Logo = styled.img`
-  margin-left: 1em;
-  margin-bottom: 0.5em;
-  height: 82px;
+  height: 30px;
+  @media (min-width: 576px) {
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    height: 82px;
+  }
 `;
 
 const StyledLink = styled(Link) `

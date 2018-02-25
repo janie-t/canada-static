@@ -1,6 +1,11 @@
 @import url('./vendor/pure-min.css');
 @import url('./vendor/grids-responsive-min.css');
 @import url('./fonts.css');
+
+*, *:after, *:before{
+  box-sizing: border-box;
+} 
+
 body {
   font-family: 'Adelle Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
