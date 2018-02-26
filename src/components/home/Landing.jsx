@@ -9,12 +9,13 @@ const HOME = content('pages.home');
 
 const Section = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: ${colors.GREEN};
   background-size: 100%;
   @media (min-width: 576px) {
     background:  url(${Images.homePattern}) ${colors.GREEN};
     height: 80%;
+    position: relative;
   }
 `
 
@@ -33,6 +34,8 @@ const HalfCol = styled.div`
   @media (min-width: 576px) {
     width: 50%;
     float: left;
+    clear: none;
+    position: relative;
   }
 `
 
@@ -89,6 +92,9 @@ const Next = styled.img`
     width: 30px;
     height: 80px;
     margin-top: 1em;
+    position: absolute;
+    right: 0;
+    bottom: 10%;
   }
   
 `;
@@ -172,9 +178,9 @@ padding: 1rem 2rem;
 const Roll = styled.img`
 display: none;
 @media (min-width: 576px) {
-  display: block;
-  width: 70%;
-  bottom: 10px;
+  display: inline-block;
+  max-width: 70%;
+  margin-bottom: -10px;
 }
 `
 
@@ -184,9 +190,8 @@ bottom: -5px;
 width: 60%;
 position: relative;
 @media (min-width: 576px) {
-  width: 30%;
   position: absolute;
-  bottom: -10px;
+  max-width: 30%;
   right: 0;
 }
 
