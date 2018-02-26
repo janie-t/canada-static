@@ -12,17 +12,18 @@ const Section = styled.div`
   height: 94vh;
   background-color: ${colors.GREEN};
   background-size: 100%;
+  position: relative;
   @media (min-width: 576px) {
     background:  url(${Images.homePattern}) ${colors.GREEN};
     height: 80%;
-    position: relative;
   }
 `
 
 const Container = styled.div`
   z-index: 1;
   padding: 2em 1em;
-  background:  url(${Images.homePattern2}) ${colors.GREEN};
+  background:  url(${Images.homePattern});
+  background-color: ${colors.GREEN};
   @media (min-width: 576px) {
     background: transparent;
     max-width: 976px;
@@ -173,7 +174,7 @@ padding: 1rem 2rem;
 @media (min-width: 576px) {
   width: 40%;
 }
-`
+`;
 
 const Roll = styled.img`
 display: none;
@@ -182,20 +183,20 @@ display: none;
   max-width: 70%;
   margin-bottom: -10px;
 }
-`
+`;
 
 const Dash = styled.img`
 right: -150px;
 bottom: -5px;
 width: 60%;
 position: relative;
+z-index: 5;
 @media (min-width: 576px) {
   position: absolute;
   max-width: 30%;
   right: 0;
 }
-
-`
+`;
 
 const Landing = () => (
   <Section>

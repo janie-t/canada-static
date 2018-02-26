@@ -95,25 +95,6 @@ const StyledLink = styled(Link) `
   }
 `;
 
-const Menu = ({ items }) => (
-  <div className={CLASSES.menu}>
-    <Link to="/" className={CLASSES.brand}>
-      <Logo src={Images.logo} alt={content('app.title')} />
-      <LogoWhite src={Images.logoWhite} alt='logo' />
-
-    </Link>
-    <ul className={CLASSES.menuList}>
-      {map(items, (label, path) => (
-        <li key={`menu_${path}`} className={CLASSES.menuItem}>
-          <StyledLink className={CLASSES.menuLink}>{label}</StyledLink>
-        </li>
-      ))}
-    </ul>
-    <MenuIcon src={Images.menu} alt='menu' />
-
-  </div>
-);
-
 const NavLeft = styled.div`
   display: flex;
   align-items: center;
@@ -137,6 +118,27 @@ const LoginButton = styled.button`
     border: 1px solid #009edb;
   }
 `;
+
+const Menu = ({ items }) => (
+  <div className={CLASSES.menu}>
+    <Link to="/" className={CLASSES.brand}>
+      <Logo src={Images.logo} alt={content('app.title')} />
+      <LogoWhite src={Images.logoWhite} alt='logo' />
+
+    </Link>
+    <ul className={CLASSES.menuList}>
+      {map(items, (label, path) => (
+        <li key={`menu_${path}`} className={CLASSES.menuItem}>
+          <StyledLink className={CLASSES.menuLink}>{label}</StyledLink>
+        </li>
+      ))}
+    </ul>
+    <MenuIcon src={Images.menu} alt='menu' />
+
+  </div>
+);
+
+
 
 export default withSiteData(() => {
   const MENUS = content('menus');

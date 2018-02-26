@@ -8,6 +8,7 @@ import arrowRight from './images/arrow-right.png';
 import dash from './images/dashboard.png';
 import support from './images/background2.png';
 import menu from './images/hamburger.svg';
+import blob from './images/blob.png';
 
 const Images = {
   logo,
@@ -19,6 +20,7 @@ const Images = {
   dash,
   support,
   menu,
+  blob,
 };
 const Icons = {
   bolt,
