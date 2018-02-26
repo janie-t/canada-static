@@ -59,7 +59,6 @@ const Subheading = styled.div`
 
 export default withSiteData(() => {
   const FEATURES = content('pages.home.features');
-  console.log(FEATURES);
   return (
     <Section>
       <Container>

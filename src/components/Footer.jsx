@@ -19,7 +19,7 @@ const Footer = () => (
   <Section>
     <Background>
       <Container>
-        Copyright &copy; 2018 Thankyou Payroll. Code by <i>Janie</i>
+        Copyright &copy; 2018 Thankyou Payroll.
       </Container>
     </Background>
   </Section>

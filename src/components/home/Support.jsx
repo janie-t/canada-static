@@ -1,19 +1,23 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { Section, Container } from '../commons';
 import colors from '../../styles/colors';
 import { Images } from '../../assets';
 
-const Background = styled.div`
-  display: flex;
-  flex: 1;
-  background:  url(${Images.support});
-  background-repeat: no-repeat;
-  background-size: 100%;
-  z-index: 1;
+const Section = styled.div`
   width: 100%;
   height: 500px;
+  background-size: 100%;
+  background:  url(${Images.support});
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10%;
+
+`;
+
+const Container = styled.div`
   align-items: center;
+  z-index: 1;
+  padding: 2em 1em;
 `;
 
 const Middle = styled.div`
@@ -21,18 +25,7 @@ const Middle = styled.div`
   width: 100%;
   height: 200px;
   background: rgba(69, 62, 64, 0.4);
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    border-top: 1px solid;
-    border-color: ${colors.WHITE};
-    width: 100 %;
-    transform: translateY(-50%);
-  }
-  display: flex;
+
   color: ${colors.WHITE};
 `;
 
@@ -41,6 +34,9 @@ const MainText = styled.div`
   font-size: 3em;
   font-weight: bold;
   max-height: 150px;
+  border-bottom: 1px solid;
+  border-color: ${colors.WHITE};
+  border-width: 100%;
 `;
 
 const SubText = styled.div`
@@ -57,19 +53,17 @@ const NewContent = styled.div`
 
 const Support = () => (
   <Section>
-    <Background>
-      <Middle>
-        <Container>
-          <MainText>We have a really great support team.</MainText>
-          <SubText>
-            We are proud of these humans in the Wellington office. Our customers love them.
+    <Middle>
+      <Container>
+        <MainText>We have a really great support team.</MainText>
+        <SubText>
+          We are proud of these humans in the Wellington office. Our customers love them.
           </SubText>
-          <NewContent>
-            Link to new content
+        <NewContent>
+          Link to new content
           </NewContent>
-        </Container>
-      </Middle>
-    </Background>
+      </Container>
+    </Middle>
   </Section>
 );
 
