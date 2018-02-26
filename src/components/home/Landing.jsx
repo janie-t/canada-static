@@ -5,27 +5,36 @@ import { Images } from '../../assets';
 import content from '../../content';
 import colors from '../../styles/colors';
 
-// const CLASSES = {
-//   halfCol: 'pure-u-1-2',
-// };
-
 const HOME = content('pages.home');
 
 const Section = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${colors.GREEN};
+  background-size: 100%;
+  background:  url(${Images.homePattern2}) ${colors.GREEN};
+  @media (min-width: 576px) {
+    background:  url(${Images.homePattern}) ${colors.GREEN};
+    height: 80%;
+  }
 `
 
 const Container = styled.div`
-  background-size: 100%;
   z-index: 1;
-  background:  url(${Images.homePattern2}) ${colors.GREEN};
   padding: 2em 1em;
   @media (min-width: 576px) {
-    background:  url(${Images.homePattern}) ${colors.GREEN};
+    max-width: 976px;
+    margin: auto;
   }
 `;
+
+const HalfCol = styled.div`
+  @media (min-width: 576px) {
+    width: 50%;
+    float: left;
+  }
+`
+
 
 const Heading = styled.div`
   font-size: 1.5em;
@@ -36,6 +45,8 @@ const Heading = styled.div`
     color: black;
     font-size: 2em;
     padding-top: 2em;
+    text-align: left;
+
   }
 `;
 
@@ -45,10 +56,10 @@ const Subheading = styled.div`
   margin-top: 10px;
   letter-spacing: 1px;
   @media (min-width: 576px) {
+    text-align: left;
     font-size: 2em;
-    padding-top: 1em;
+    padding-top: 0em;
     padding-bottom: 1em;
-    margin-bottom: 1em;
     border-bottom: 2px solid;
     border-color: ${colors.LIGHTGREEN};
   }
@@ -63,7 +74,7 @@ width: 100%;
 font-weight: bolder;
 @media (min-width: 576px) {
   font-size: 1.5em;
-  padding-top: 0.5em;
+  margin-top: 0.5em;
   margin-left: 1.5em;
   width: 70%;
 }
@@ -73,7 +84,7 @@ font-weight: bolder;
 const Next = styled.img`
   display: none;
   @media (min-width: 576px) {
-    display: block;
+    display: inline;
     width: 30px;
     height: 80px;
     margin-top: 1em;
@@ -128,6 +139,7 @@ border-radius: 5px;
   background: ${colors.DARKBLUE};
   color: white;
   width: 40%;
+  margin-bottom: 30px;
   &:hover {
     background-color: white;
     color: ${colors.DARKBLUE};
@@ -151,24 +163,30 @@ padding: 1rem 2rem;
   background-color: white;  
   color: ${colors.DARKBLUE};
 }
+@media (min-width: 576px) {
+  width: 40%;
+}
 `
 
 const Roll = styled.img`
 display: none;
 @media (min-width: 576px) {
-  display: inline;
+  display: block;
   width: 70%;
-  bottom: 0;
+  bottom: 10px;
 }
 `
 
 const Dash = styled.img`
 right: -150px;
-bottom: 20px;
+bottom: -5px;
 width: 60%;
 position: relative;
 @media (min-width: 576px) {
   width: 30%;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
 }
 
 `
@@ -176,20 +194,17 @@ position: relative;
 const Landing = () => (
   <Section>
     <Container>
-      {/* <div className={CLASSES.halfCol}> */}
-      <Heading>{HOME.landing_heading}</Heading>
-      <Subheading>{HOME.landing_subheading}</Subheading>
-      {/* <div className={CLASSES.halfCol}> */}
+      <HalfCol>
+        <Heading>{HOME.landing_heading}</Heading>
+        <Subheading>{HOME.landing_subheading}</Subheading>
+        <Quote>{HOME.customer_quote}</Quote>
+        <Next src={Images.arrowRight} />
+        <Author>{HOME.author}</Author>
+      </HalfCol>
       <ActionButtons>
         <Signup>Sign up now</Signup>
         <Contact>Contact Us</Contact>
       </ActionButtons>
-      {/* </div> */}
-      <Quote>{HOME.customer_quote}</Quote>
-      <Next src={Images.arrowRight} />
-      <Author>{HOME.author}</Author>
-      {/* </div> */}
-
     </Container>
     <Roll src={Images.ballRoll} />
     <Dash src={Images.dash} />
