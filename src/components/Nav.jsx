@@ -31,17 +31,25 @@ const Section = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 60px;
-  position: absolute;
-  left: 10px;
-  top: 15px;
+ display: none;
   @media (min-width: 576px) {
+    display: inline;
     position: relative;
     left: 0;
     top: 0;
     margin-left: 1em;
     margin-bottom: 0.5em;
     height: 82px;
+  }
+`;
+
+const LogoWhite = styled.img`
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  @media (min-width: 576px) {
+   display: none;
   }
 `;
 
@@ -91,6 +99,8 @@ const Menu = ({ items }) => (
   <div className={CLASSES.menu}>
     <Link to="/" className={CLASSES.brand}>
       <Logo src={Images.logo} alt={content('app.title')} />
+      <LogoWhite src={Images.logoWhite} alt='logo' />
+
     </Link>
     <ul className={CLASSES.menuList}>
       {map(items, (label, path) => (

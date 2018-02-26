@@ -9,7 +9,7 @@ const HOME = content('pages.home');
 
 const Section = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 94vh;
   background-color: ${colors.GREEN};
   background-size: 100%;
   @media (min-width: 576px) {
