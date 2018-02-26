@@ -4,7 +4,6 @@ import styled from 'react-emotion';
 import { Images } from '../../assets';
 import content from '../../content';
 import colors from '../../styles/colors';
-import { Container } from '../commons';
 
 // const CLASSES = {
 //   halfCol: 'pure-u-1-2',
@@ -15,14 +14,14 @@ const HOME = content('pages.home');
 const Section = styled.div`
   width: 100%;
   height: 100%;
+  background-color: ${colors.GREEN};
 `
 
-
-const Background = styled.div`
+const Container = styled.div`
   background-size: 100%;
   z-index: 1;
-  height: 100%;
   background:  url(${Images.homePattern2}) ${colors.GREEN};
+  padding: 2em 1em;
   @media (min-width: 576px) {
     background:  url(${Images.homePattern}) ${colors.GREEN};
   }
@@ -89,6 +88,7 @@ const Author = styled.div`
   font-size: 0.8em;
   margin-top: 0;
   margin-left: 5px;
+  margin-bottom: 1em;
   @media (min-width: 576px) {
     font-size: 1.2em;
     margin-top: 10px;
@@ -160,37 +160,39 @@ display: none;
   width: 70%;
   bottom: 0;
 }
-
 `
+
 const Dash = styled.img`
+right: -150px;
+bottom: 20px;
+width: 60%;
+position: relative;
+@media (min-width: 576px) {
   width: 30%;
-  position: relative;
-  right: 0;
-  bottom: 0;
+}
+
 `
 
 const Landing = () => (
   <Section>
-    <Background>
-      <Container>
-        {/* <div className={CLASSES.halfCol}> */}
-        <Heading>{HOME.landing_heading}</Heading>
-        <Subheading>{HOME.landing_subheading}</Subheading>
-        {/* <div className={CLASSES.halfCol}> */}
-        <ActionButtons>
-          <Signup>Sign up now</Signup>
-          <Contact>Contact Us</Contact>
-        </ActionButtons>
-        {/* </div> */}
-        <Quote>{HOME.customer_quote}</Quote>
-        <Next src={Images.arrowRight} />
-        <Author>{HOME.author}</Author>
-        {/* </div> */}
+    <Container>
+      {/* <div className={CLASSES.halfCol}> */}
+      <Heading>{HOME.landing_heading}</Heading>
+      <Subheading>{HOME.landing_subheading}</Subheading>
+      {/* <div className={CLASSES.halfCol}> */}
+      <ActionButtons>
+        <Signup>Sign up now</Signup>
+        <Contact>Contact Us</Contact>
+      </ActionButtons>
+      {/* </div> */}
+      <Quote>{HOME.customer_quote}</Quote>
+      <Next src={Images.arrowRight} />
+      <Author>{HOME.author}</Author>
+      {/* </div> */}
 
-      </Container>
-      <Roll src={Images.ballRoll} />
-      <Dash src={Images.dash} />
-    </Background>
+    </Container>
+    <Roll src={Images.ballRoll} />
+    <Dash src={Images.dash} />
   </Section>
 );
 
