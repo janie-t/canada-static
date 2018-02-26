@@ -127,7 +127,7 @@ const ActionButtons = styled.div`
 `;
 
 const Signup = styled.button`
-width: 90%;
+width: 80%;
 margin: auto;
 text-transform: uppercase;
 transition: background-color 200ms ease, color 200ms ease;
@@ -156,7 +156,7 @@ border-radius: 5px;
 `;
 
 const Contact = styled.button`
-width: 90%;
+width: 80%;
 margin: auto;
 background: rgba(255,255,255, 0.2);
 transition: background-color 200ms ease, color 200ms ease;
