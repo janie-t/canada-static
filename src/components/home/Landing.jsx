@@ -59,7 +59,6 @@ const Subheading = styled.div`
   font-size: 1.2em;
   text-align: center;
   margin-top: 10px;
-  letter-spacing: 1px;
   @media (min-width: 576px) {
     text-align: left;
     font-size: 2em;
@@ -74,8 +73,8 @@ const Quote = styled.div`
 color: white;
 font-size: 1em;
 padding-top: 1.5em;
-margin-left: 0.5em;
-width: 100%;
+width: 90%;
+margin: auto;
 font-weight: bolder;
 @media (min-width: 576px) {
   font-size: 1.5em;
@@ -106,7 +105,7 @@ const Author = styled.div`
   text-transform: uppercase;
   font-size: 0.8em;
   margin-top: 0;
-  margin-left: 5px;
+  margin-left: 15px;
   margin-bottom: 1em;
   @media (min-width: 576px) {
     font-size: 1.2em;
