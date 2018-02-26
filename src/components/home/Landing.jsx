@@ -12,7 +12,6 @@ const Section = styled.div`
   height: 100%;
   background-color: ${colors.GREEN};
   background-size: 100%;
-  background:  url(${Images.homePattern2}) ${colors.GREEN};
   @media (min-width: 576px) {
     background:  url(${Images.homePattern}) ${colors.GREEN};
     height: 80%;
@@ -22,7 +21,9 @@ const Section = styled.div`
 const Container = styled.div`
   z-index: 1;
   padding: 2em 1em;
+  background:  url(${Images.homePattern2}) ${colors.GREEN};
   @media (min-width: 576px) {
+    background: transparent;
     max-width: 976px;
     margin: auto;
   }
