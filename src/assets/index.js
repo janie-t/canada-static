@@ -7,6 +7,7 @@ import ballRoll from './images/ball-rolling.png';
 import arrowRight from './images/arrow-right.png';
 import dash from './images/dashboard.png';
 import support from './images/background2.png';
+import menu from './images/hamburger.svg';
 
 const Images = {
   logo,
@@ -16,6 +17,7 @@ const Images = {
   arrowRight,
   dash,
   support,
+  menu,
 };
 const Icons = {
   bolt,

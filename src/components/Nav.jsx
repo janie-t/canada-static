@@ -23,6 +23,7 @@ const Section = styled.div`
   width: 100%;
   background-color: ${colors.GREEN};
   height: 100px;
+  z-index: -1;
   @media (min-width: 576px) {
     background-color: ${colors.WHITE};
     height: 150px;
@@ -30,15 +31,33 @@ const Section = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 30px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
   @media (min-width: 576px) {
+    position: relative;
+    left: 0;
+    top: 0;
     margin-left: 1em;
     margin-bottom: 0.5em;
     height: 82px;
   }
 `;
 
+const MenuIcon = styled.img`
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  @media (min-width: 576px) {
+    display: none;
+  }
+`
+
+
 const StyledLink = styled(Link) `
+  display: none;
   padding: 0;
   margin: 0 1rem;
   text-decoration: none;
@@ -63,6 +82,9 @@ const StyledLink = styled(Link) `
       width: 100%;
     }
   }
+  @media (min-width: 576px) {
+    display: inline;
+  }
 `;
 
 const Menu = ({ items }) => (
@@ -77,6 +99,8 @@ const Menu = ({ items }) => (
         </li>
       ))}
     </ul>
+    <MenuIcon src={Images.menu} alt='menu' />
+
   </div>
 );
 
