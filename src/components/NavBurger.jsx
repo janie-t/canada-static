@@ -4,11 +4,14 @@ import { withSiteData, Link } from 'react-static'
 
 var styles = {
     bmBurgerButton: {
-        position: 'fixed',
+        position: 'absolute',
         width: '36px',
         height: '30px',
         right: '36px',
         top: '36px',
+        '@media (min-width: 576px)': {
+            display: 'none'
+        }
     },
     bmBurgerBars: {
         background: 'white'
