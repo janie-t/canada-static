@@ -5,7 +5,8 @@ import { map } from 'lodash';
 import { Images } from '../assets';
 import content from '../content';
 import colors from '../styles/colors';
-import { Section, Container } from './commons';
+import { Container } from './commons';
+import Burger from './NavBurger';
 
 const CLASSES = {
   menu: 'pure-menu pure-menu-horizontal',
@@ -18,13 +19,43 @@ const CLASSES = {
   button: 'pure-button',
 };
 
-const Logo = styled.img`
-  margin-left: 1em;
-  margin-bottom: 0.5em;
-  height: 82px;
+const Section = styled.div`
+  width: 100%;
+  background-color: ${colors.GREEN};
+  height: 100px;
+  z-index: -1;
+  @media (min-width: 576px) {
+    background-color: ${colors.WHITE};
+    height: 150px;
+  }
 `;
 
-const StyledLink = styled(Link)`
+const Logo = styled.img`
+ display: none;
+  @media (min-width: 576px) {
+    display: inline;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    height: 82px;
+  }
+`;
+
+const LogoWhite = styled.img`
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  @media (min-width: 576px) {
+   display: none;
+  }
+`;
+
+
+const StyledLink = styled(Link) `
+  display: none;
   padding: 0;
   margin: 0 1rem;
   text-decoration: none;
@@ -49,22 +80,10 @@ const StyledLink = styled(Link)`
       width: 100%;
     }
   }
+  @media (min-width: 576px) {
+    display: inline;
+  }
 `;
-
-const Menu = ({ items }) => (
-  <div className={CLASSES.menu}>
-    <Link to="/" className={CLASSES.brand}>
-      <Logo src={Images.logo} alt={content('app.title')} />
-    </Link>
-    <ul className={CLASSES.menuList}>
-      {map(items, (label, path) => (
-        <li key={`menu_${path}`} className={CLASSES.menuItem}>
-          <StyledLink className={CLASSES.menuLink}>{label}</StyledLink>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
 
 const NavLeft = styled.div`
   display: flex;
@@ -90,6 +109,25 @@ const LoginButton = styled.button`
   }
 `;
 
+
+const Menu = ({ items }) => (
+  <div className={CLASSES.menu}>
+    <Link to="/" className={CLASSES.brand}>
+      <Logo src={Images.logo} alt={content('app.title')} />
+      <LogoWhite src={Images.logoWhite} alt={content('app.title')} />
+    </Link>
+    <ul className={CLASSES.menuList}>
+      {map(items, (label, path) => (
+        <li key={`menu_${path}`} className={CLASSES.menuItem}>
+          <StyledLink className={CLASSES.menuLink}>{label}</StyledLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+
+
 export default withSiteData(() => {
   const MENUS = content('menus');
   return (
@@ -102,6 +140,7 @@ export default withSiteData(() => {
           <LoginButton className={CLASSES.button}>
             {content('buttons.login').toUpperCase()}
           </LoginButton>
+          <Burger />
         </NavRight>
       </Container>
     </Section>

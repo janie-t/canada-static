@@ -2,12 +2,16 @@ import styled from 'react-emotion';
 
 const Section = styled.section`
   width: 100%;
-  display: flex;
+  height: 100%;
 `;
 
 const Container = styled.div`
-  max-width: 970px;
   margin: auto;
+  max-width: 80%;
+  padding-top: 2em;
+  @media (min-width: 576px) {
+    max-width: 970px;
+  }
 `;
 
 export { Section, Container };

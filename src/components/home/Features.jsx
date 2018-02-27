@@ -31,13 +31,18 @@ const FeatureGrid = styled.div`
 `;
 
 const Square = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  padding: 1em;
-  max-width: 30%;
   text-align: center;
+  max-width: 90%;
+  margin: 20px auto 0;
   color: ${colors.LIGHTBROWN};
+  @media (min-width: 576px) {
+    margin-top: 50px;
+    padding: 1em;
+    max-width: 100%;
+  }
 `;
 
 const Icon = styled.img`
@@ -59,7 +64,6 @@ const Subheading = styled.div`
 
 export default withSiteData(() => {
   const FEATURES = content('pages.home.features');
-  console.log(FEATURES);
   return (
     <Section>
       <Container>

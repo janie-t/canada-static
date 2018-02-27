@@ -7,6 +7,7 @@ const GREY = '#d8e2e7';
 const DARKBROWN = '#453e40';
 const LIGHTBROWN = '#817478';
 const WHITE = '#ffffff';
+const ORANGE = '#f08329';
 
 export default {
   DARKBLUE,
@@ -18,4 +19,5 @@ export default {
   DARKBROWN,
   LIGHTBROWN,
   WHITE,
+  ORANGE,
 };

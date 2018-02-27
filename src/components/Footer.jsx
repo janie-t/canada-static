@@ -5,22 +5,26 @@ import { map } from 'lodash';
 import { Icons } from '../assets';
 import content from '../content';
 import colors from '../styles/colors';
-import { Section, Container } from './commons';
+import { Section } from './commons';
 
 const Background = styled.div`
   background-color: ${colors.DARKBLUE};
   color: white;
   width: 100%;
-  height: 60px;
-  display: flex;
+  height: 80px;
+  text-align: center;
+  padding-top: 30px;
+  @media (min-width: 576px) {
+    height: 60px;
+    font-size: 1.2em;
+    padding-top: 20px;
+  };
 `;
 
 const Footer = () => (
   <Section>
     <Background>
-      <Container>
-        Copyright &copy; 2018 Thankyou Payroll. Code by <i>Janie</i>
-      </Container>
+      Copyright &copy; 2018 Thankyou Payroll.
     </Background>
   </Section>
 );
