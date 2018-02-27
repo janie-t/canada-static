@@ -6,7 +6,7 @@ import { Images } from '../assets';
 import content from '../content';
 import colors from '../styles/colors';
 import { Container } from './commons';
-
+import Burger from './NavBurger';
 
 const CLASSES = {
   menu: 'pure-menu pure-menu-horizontal',
@@ -52,16 +52,6 @@ const LogoWhite = styled.img`
    display: none;
   }
 `;
-
-const MenuIcon = styled.img`
-  height: 30px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  @media (min-width: 576px) {
-    display: none;
-  }
-`
 
 
 const StyledLink = styled(Link) `
@@ -119,12 +109,12 @@ const LoginButton = styled.button`
   }
 `;
 
+
 const Menu = ({ items }) => (
   <div className={CLASSES.menu}>
     <Link to="/" className={CLASSES.brand}>
       <Logo src={Images.logo} alt={content('app.title')} />
-      <LogoWhite src={Images.logoWhite} alt='logo' />
-
+      <LogoWhite src={Images.logoWhite} alt={content('app.title')} />
     </Link>
     <ul className={CLASSES.menuList}>
       {map(items, (label, path) => (
@@ -133,8 +123,6 @@ const Menu = ({ items }) => (
         </li>
       ))}
     </ul>
-    <MenuIcon src={Images.menu} alt='menu' />
-
   </div>
 );
 
@@ -152,6 +140,7 @@ export default withSiteData(() => {
           <LoginButton className={CLASSES.button}>
             {content('buttons.login').toUpperCase()}
           </LoginButton>
+          <Burger />
         </NavRight>
       </Container>
     </Section>
