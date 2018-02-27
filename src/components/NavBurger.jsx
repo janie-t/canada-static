@@ -9,7 +9,7 @@ var styles = {
         height: '30px',
         right: '36px',
         top: '36px',
-        '@media (min-width: 576px)': {
+        '@media (minWidth: 576px)': {
             display: 'none'
         }
     },
