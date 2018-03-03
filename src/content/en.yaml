@@ -1,0 +1,78 @@
+app:
+  title: Thankyou Payroll
+buttons:
+  login: Login
+  sign_up_now: Sign up now
+  contact_us_chat: Contact us for a chat
+menus:
+  root: Home
+  plans: Plans and Pricing
+  how: How it works
+  about: About us
+  contact: Contact
+pages:
+  home: 
+    landing_heading: >
+      We are a fast-growing New Zealand payroll company. 
+    landing_subheading: >
+      Our service is easy to use, and we are still free for small businesses.
+    customer_quote: >
+      "We can now spend more time on building the business rather than non productive book
+      work. Thank you!"
+    features:
+      - heading: Easy to use
+        subheading: Our payroll platform is easy and user-friendly, and makes managing your payroll 
+                    stress free and lightning fast.
+      - heading: Friendly help desk
+        subheading: Our amazing support team always go the extra mile to help you - and it doesn't cost
+                    you more to have them on hand.    
+      - heading: Calculate Leave
+        subheading: We calculate and monitor employee leave according to the Holidays Act, helping you
+                    stay on top of leave requirements. 
+      - heading: File Employer Returns
+        subheading: We calculate all PAYE, Kiwisaver, Student loans and Child Support and file it with the IRD. We keep you compliant.  We even do MoJ fines.
+      - heading: Employee Portal
+        subheading: Your employees can upload their own hours, get payslips, and request annual leave -
+                    all you need to do is check and authorise it.
+      - heading: Transfer Wages
+        subheading: We pay all your employees directly, and email them payslips - you can even put your
+                    business logo on them.
+      - heading: Giving Made Simple
+        subheading: It's effortless for your employees to donate regularly to their favourite charity.
+                    They get an immediate tax rebate on each donation.
+      - heading: 24 / 7 Access
+        subheading: Our platform is cloud-based, which means you access your payroll from anywhere,
+                     anytime. All you need is a device and an internet connection.
+      - heading: Good for any business
+        subheading: Payroll solutions for trades and skilled labour, business and investment, hospitality,
+                    education, retail, social services and many more.
+    author: Scott Patterson, Puraty Limited
+  plans: Plans and Pricing
+  how: How it works
+  about:
+    title: About Us
+    paragraphs:
+      - We put purpose before profit.
+      - >
+        Thankyou Payroll is a Wellington based social business that aims to create holistic benefits.
+        We provide free payroll intermediary services to SMEs and charities all over New Zealand. We
+        use an IRD subsidy to cover our costs and we put 25 cents per person, per pay (up to $1.25 per
+        client) into the Thankyou Charitable Trust, which distributes funds to community organisations
+        around New Zealand.
+      - >
+        It all began in 2009, in Dunedin when Hugh Davidson saw an opportunity to leverage an IRD
+        payroll subsidy to create community good. From the musty depths of a Port Chalmers garage,
+        version one of the online payroll system emerged. Steady improvement and word of mouth saw the
+        company grow in clients, staff and service features. In 2013 we launched version two of
+        Thankyou Payroll, with a complete redesign, greater versatility, easier integration with
+        external services like Xero and a range of other client focused features.
+      - >
+        We now work with thousands of clients all over New Zealand and process millions of dollars
+        worth of pays each week. We have opened a Wellington office, which has become our HQ and we
+        continue to focus on maintaining a great work environment because dang! it makes life more fun
+        when you love the work.
+  contact: Contact
+  error:
+    text: 404 - Oh no's! We couldn't find that page :(
+
+    
