@@ -8,7 +8,7 @@ import colors from '../styles/colors';
 import { Section } from './commons';
 
 const Background = styled.div`
-  background-color: ${colors.DARKBLUE};
+  background-color: ${colors.RED};
   color: white;
   width: 100%;
   height: 80px;
@@ -24,7 +24,7 @@ const Background = styled.div`
 const Footer = () => (
   <Section>
     <Background>
-      Copyright &copy; 2018 Thankyou Payroll.
+      Copyright &copy; 2018 Canada Immigration.
     </Background>
   </Section>
 );

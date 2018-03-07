@@ -30,7 +30,7 @@ export default {
       res.json());
     return [
       getRoute('/', 'Home'),
-      getRoute('/plans', '404'),
+      getRoute('/fees', '404'),
       getRoute('/how', '404'),
       getRoute('/about', '404'),
       getRoute('/contact', '404'),
