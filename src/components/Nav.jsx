@@ -21,7 +21,7 @@ const CLASSES = {
 
 const Section = styled.div`
   width: 100%;
-  background-color: ${colors.GREEN};
+  background-color: ${colors.WHITE};
   height: 100px;
   z-index: -1;
   @media (min-width: 576px) {
@@ -31,7 +31,6 @@ const Section = styled.div`
 `;
 
 const Logo = styled.img`
- display: none;
   @media (min-width: 576px) {
     display: inline;
     position: relative;
@@ -40,16 +39,6 @@ const Logo = styled.img`
     margin-left: 1em;
     margin-bottom: 0.5em;
     height: 82px;
-  }
-`;
-
-const LogoWhite = styled.img`
-  height: 60px;
-  position: absolute;
-  left: 10px;
-  top: 15px;
-  @media (min-width: 576px) {
-   display: none;
   }
 `;
 
@@ -96,25 +85,11 @@ const NavRight = styled.div`
   justify-content: center;
 `;
 
-const LoginButton = styled.button`
-  background: transparent;
-  color: ${colors.BLUE};
-  border: 1px solid ${colors.BLUE};
-  padding: 0.5rem 2rem;
-  transition: background-color 200ms ease, color 200ms ease;
-  &:hover {
-    background-color: ${colors.BLUE};
-    color: white;
-    border: 1px solid #009edb;
-  }
-`;
-
 
 const Menu = ({ items }) => (
   <div className={CLASSES.menu}>
     <Link to="/" className={CLASSES.brand}>
       <Logo src={Images.logo} alt={content('app.title')} />
-      <LogoWhite src={Images.logoWhite} alt={content('app.title')} />
     </Link>
     <ul className={CLASSES.menuList}>
       {map(items, (label, path) => (
@@ -137,9 +112,6 @@ export default withSiteData(() => {
           <Menu items={MENUS} />
         </NavLeft>
         <NavRight>
-          <LoginButton className={CLASSES.button}>
-            {content('buttons.login').toUpperCase()}
-          </LoginButton>
           <Burger />
         </NavRight>
       </Container>
