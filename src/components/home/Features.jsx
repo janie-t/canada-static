@@ -12,8 +12,6 @@ const PURECLASSES = {
   square: 'pure-u-1 pure-u-md-1-2 pure-u-lg-1-3',
 };
 
-const HOME = content('pages.home');
-
 const Grid = ({ items }) => (
   <FeatureGrid className={PURECLASSES.grid}>
     {map(items, ({ heading, subheading }) => (
