@@ -10,26 +10,52 @@ const HOME = content('pages.home');
 const Section = styled.div`
   width: 100%;
   height: 94vh;
-  background-color: ${colors.RED};
-  background-size: 100%;
-  position: relative;
+  background: ${colors.RED};
   @media (min-width: 576px) {
     background:  url(${Images.pattern}) ${colors.RED};
-    height: 80%;
+    height: 55vh;
+    display: flex;
   }
-`
+`;
 
 const Container = styled.div`
-  z-index: 1;
   padding: 2em 1em;
-  background:  url(${Images.homePattern});
   background-color: ${colors.RED};
-  min-height: 400px;
   @media (min-width: 576px) {
     background: transparent;
     max-width: 976px;
     margin: auto;
   }
+`;
+
+const ImageOne = styled.img`
+  width: 50%;
+  margin: auto;
+  @media (min-width: 576px) {
+    flex: 1;
+    display: inline;
+  }
+  
+`;
+
+const ImageTwo = styled.img`
+width: 50%;
+margin: auto;
+display: none;
+@media (min-width: 576px) {
+  flex: 1;
+  display: inline;
+}
+
+`;
+
+const ImageThree = styled.img`
+display: inline;
+flex: 1;
+width: 50%;
+@media (min-width: 576px) {
+  display: none;
+}
 `;
 
 const HalfCol = styled.div`
@@ -38,8 +64,9 @@ const HalfCol = styled.div`
     float: left;
     clear: none;
     position: relative;
+    flex: 1;
   }
-`
+`;
 
 
 const Heading = styled.div`
@@ -133,6 +160,9 @@ padding: 1rem 2rem;
 
 const Landing = () => (
   <Section>
+    <ImageOne src={Images.canada} alt="canadian lake" />
+    <ImageThree src={Images.canada2} alt="canadian lake" />
+
     <Container>
       <HalfCol>
         <Heading>{HOME.landing_heading}</Heading>
@@ -143,6 +173,8 @@ const Landing = () => (
         <Contact>Contact Us</Contact>
       </ActionButtons>
     </Container>
+    <ImageTwo src={Images.canada2} alt="canadian city" />
+
   </Section>
 );
 
