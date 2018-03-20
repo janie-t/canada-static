@@ -24,23 +24,21 @@ export default {
     ];
     return { ...config, module: { ...config.module, rules } };
   },
-  getSiteData: () => ({ title: 'Thankyou Payroll' }),
+  getSiteData: () => ({ title: 'Canada Immigration' }),
   getRoutes: async () => {
-    const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then(async res =>
-      res.json());
     return [
       getRoute('/', 'Home'),
-      getRoute('/fees', '404'),
-      getRoute('/how', '404'),
-      getRoute('/about', '404'),
-      getRoute('/contact', '404'),
-      getRoute('/blog', '404', {
-        getData: () => ({ posts }),
-        children: posts.map(post =>
-          getRoute(`/post/${post.id}`, '404', {
-            getData: () => ({ post }),
-          })),
-      }),
+      getRoute('/home', 'Home'),
+      getRoute('/citizenship', 'Citizenship'),
+      getRoute('/study', 'Study'),
+      getRoute('/work', 'Work'),
+      getRoute('/caregiver', 'Caregiver'),
+      getRoute('/asylum', 'Asylum'),
+      getRoute('/appeal', 'Appeals'),
+      getRoute('/contact', 'Contact'),
+      getRoute('/about', 'About'),
+      getRoute('/assessment', 'Assessment'),
+
       {
         is404: true,
         component: getPage('404'),

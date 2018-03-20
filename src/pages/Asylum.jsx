@@ -4,8 +4,8 @@ import { Section, Container } from '../components/commons';
 export default () => (
   <Section>
     <Container>
-      <h1>About Us</h1>
-      <p>Who we are</p>
+      <h1>Asylum</h1>
+      <p>Information for asylum seekers</p>
     </Container>
   </Section>
 );
