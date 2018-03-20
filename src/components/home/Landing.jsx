@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-static';
+import { withSiteData, Link } from 'react-static';
 import styled from 'react-emotion';
 import { Images } from '../../assets';
 import content from '../../content';
@@ -35,7 +35,7 @@ const ImageOne = styled.img`
     flex: 1;
     display: inline;
   }
-  
+
 `;
 
 const ImageTwo = styled.img`
@@ -158,7 +158,8 @@ padding: 1rem 2rem;
 }
 `;
 
-const Landing = () => (
+export default withSiteData(() => {
+  return (
   <Section>
     <ImageOne src={Images.canada} alt="canadian lake" />
     <ImageThree src={Images.canada2} alt="canadian lake" />
@@ -169,13 +170,15 @@ const Landing = () => (
         <Subheading>{HOME.landing_subheading}</Subheading>
       </HalfCol>
       <ActionButtons>
-        <Signup>Free Assessment</Signup>
-        <Contact>Contact Us</Contact>
+        <Link to="/assessment">
+          <Signup>Free Assessment</Signup>
+        </Link>
+        <Link to="/contact">
+          <Contact>Contact Us</Contact>
+        </Link>
       </ActionButtons>
     </Container>
     <ImageTwo src={Images.canada2} alt="canadian city" />
-
   </Section>
-);
-
-export default Landing;
+)
+})
