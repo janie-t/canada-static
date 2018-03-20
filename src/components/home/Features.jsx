@@ -1,5 +1,5 @@
 import React from 'react';
-import { withSiteData } from 'react-static';
+import { withSiteData, Link } from 'react-static';
 import styled, { css } from 'react-emotion';
 import { map } from 'lodash';
 import content from '../../content';
@@ -14,12 +14,15 @@ const PURECLASSES = {
 
 const Grid = ({ items }) => (
   <FeatureGrid className={PURECLASSES.grid}>
-    {map(items, ({ heading, subheading }) => (
-      <Square key={heading} className={PURECLASSES.square}>
-        <Icon src={Icons.bolt} alt="" />
-        <Heading>{heading}</Heading>
-        <Subheading>{subheading}</Subheading>
-      </Square>
+    {map(items, ({ heading, subheading, path }) => (
+        <Square key={heading} className={PURECLASSES.square}>
+          <Icon src={Icons.leaf} alt="maple leaf" />
+          <Link to={`/${path}`}>
+            <Heading>{heading}</Heading>
+            <Subheading>{subheading}</Subheading>
+          </Link>
+        </Square>
+
     ))}
   </FeatureGrid>
 );
@@ -35,7 +38,7 @@ const Square = styled.div`
   text-align: center;
   max-width: 90%;
   margin: 20px auto 0;
-  color: ${colors.LIGHTBROWN};
+  color: ${colors.RED};
   @media (min-width: 576px) {
     margin-top: 50px;
     padding: 1em;
@@ -44,7 +47,11 @@ const Square = styled.div`
 `;
 
 const Icon = styled.img`
-  border-radius: 50%;
+  border-radius: 10%;
+  width: 50px;
+  @media (min-width: 576px) {
+    width: 100px;
+  }
 `;
 
 const Heading = styled.div`

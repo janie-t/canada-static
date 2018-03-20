@@ -8,7 +8,7 @@ var styles = {
         width: '36px',
         height: '30px',
         right: '36px',
-        top: '36px',
+        top: '25px',
         '@media (minWidth: 576px)': {
             display: 'none'
         }
@@ -48,10 +48,9 @@ var styles = {
 const Burger = () => (
     <NavMenu right styles={styles}>
         <Link to="/" className="menu-item" >Home</Link>
-        <Link to="/plans" className="menu-item" >Cost</Link>
-        <Link to="/how" className="menu-item">How it works</Link>
-        <Link to="/about" className="menu-item">About Us</Link>
+        <Link to="/about" className="menu-item" >About Us</Link>
         <Link to="/contact" className="menu-item">Contact</Link>
+        <Link to="/assessment" className="menu-item">Get a free assessment</Link>
     </NavMenu>
 
 );

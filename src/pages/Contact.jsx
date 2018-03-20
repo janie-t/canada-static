@@ -1,7 +1,11 @@
 import React from 'react';
+import { Section, Container } from '../components/commons';
 
 export default () => (
-  <div>
-    <h1>Contact Us</h1>
-  </div>
+  <Section>
+    <Container>
+      <h1>Contact Us</h1>
+      <p>Contact information</p>
+    </Container>
+  </Section>
 );

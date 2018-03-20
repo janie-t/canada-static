@@ -21,8 +21,8 @@ const CLASSES = {
 
 const Section = styled.div`
   width: 100%;
-  background-color: ${colors.WHITE};
-  height: 100px;
+  background-color: ${colors.DARKBLUE};
+  height: 80px;
   z-index: -1;
   @media (min-width: 576px) {
     background-color: ${colors.WHITE};
@@ -31,11 +31,16 @@ const Section = styled.div`
 `;
 
 const Logo = styled.img`
+  width: 20%;
+  position: absolute;
+  left: 25px;
+  top: 25px;
   @media (min-width: 576px) {
-    display: inline;
+    width: 150px;
     position: relative;
     left: 0;
     top: 0;
+    display: inline;
     margin-left: 1em;
     margin-bottom: 0.5em;
     height: 82px;
@@ -94,7 +99,7 @@ const Menu = ({ items }) => (
     <ul className={CLASSES.menuList}>
       {map(items, (label, path) => (
         <li key={`menu_${path}`} className={CLASSES.menuItem}>
-          <StyledLink className={CLASSES.menuLink}>{label}</StyledLink>
+          <StyledLink to={`${path}`} className={CLASSES.menuLink}>{label}</StyledLink>
         </li>
       ))}
     </ul>
