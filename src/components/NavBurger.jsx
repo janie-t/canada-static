@@ -48,8 +48,7 @@ var styles = {
 const Burger = () => (
     <NavMenu right styles={styles}>
         <Link to="/" className="menu-item" >Home</Link>
-        <Link to="/plans" className="menu-item" >Cost</Link>
-        <Link to="/how" className="menu-item">How it works</Link>
+        <Link to="/how" className="menu-item">News</Link>
         <Link to="/about" className="menu-item">About Us</Link>
         <Link to="/contact" className="menu-item">Contact</Link>
     </NavMenu>
