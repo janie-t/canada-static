@@ -1,11 +1,10 @@
 import React from 'react';
-import { Section, Container } from '../components/commons';
+import { withSiteData } from 'react-static';
+import AppealsContent from '../components/content/Appeals-content';
+
 
 export default () => (
-  <Section>
-    <Container>
-      <h1>Appeals</h1>
-      <p>Info about appeals</p>
-    </Container>
-  </Section>
+  <div>
+    <AppealsContent />
+  </div>
 );

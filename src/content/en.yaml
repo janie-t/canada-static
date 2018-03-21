@@ -6,41 +6,30 @@ buttons:
   contact_us_chat: Contact us for a chat
 menus:
   home: Home
+  citizenship: Immigrate to Canada
+  work: Work
+  study: Study
+  business: Business
   about: About Us
-  contact: Contact
-  assessment: Get a free assessment
 pages:
   home:
-    landing_heading: >
-      We are here to help you with your Canadian visa and immigration requirements.
-    landing_subheading: >
-      Get in touch and see how we can help you.
     features:
-      - heading: Citizenship
-        subheading: heading 1 content
+      - heading: Immigrate to Canada
         path: citizenship
-      - heading: Study
-        subheading: heading 2 content
-        path: study
-      - heading: Work
-        subheading: heading 3 content
+      - heading: Work in Canada
         path: work
+      - heading: Study in Canada
+        path: study
+      - heading: Business immigration
+        path: business
+      - heading: Family sponsorship
+        path: sponsorship
       - heading: Live-in caregiver
-        subheading: heading 4 content
         path: caregiver
       - heading: Asylum seekers
-        subheading: heading 5 content
         path: asylum
       - heading: Appeals process
-        subheading: heading 6 content
         path: appeal
-  about:
-    title: About Us
-    paragraphs:
-      - About first sentence.
-      - >
-        Some information about the service/company.
-
   contact: Contact
   error:
     text: 404 - Oh no! We couldn't find that page :(

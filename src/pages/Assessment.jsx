@@ -1,11 +1,10 @@
 import React from 'react';
-import { Section, Container } from '../components/commons';
+import { withSiteData } from 'react-static';
+import AssessmentContent from '../components/content/Assessment-content';
+
 
 export default () => (
-  <Section>
-    <Container>
-      <h1>Immigration assessment</h1>
-      <p>Link to Google Form</p>
-    </Container>
-  </Section>
+  <div>
+    <AssessmentContent />
+  </div>
 );

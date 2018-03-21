@@ -1,10 +1,10 @@
 import React from 'react';
 import { withSiteData } from 'react-static';
-import ContactContent from '../components/content/Contact-content';
+import SponsorshipContent from '../components/content/Sponsorship-content';
 
 
 export default () => (
   <div>
-    <ContactContent />
+    <SponsorshipContent />
   </div>
 );

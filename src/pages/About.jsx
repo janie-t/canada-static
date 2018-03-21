@@ -1,11 +1,10 @@
 import React from 'react';
-import { Section, Container } from '../components/commons';
+import { withSiteData } from 'react-static';
+import AboutContent from '../components/content/About-content';
+
 
 export default () => (
-  <Section>
-    <Container>
-      <h1>About Us</h1>
-      <p>Who we are</p>
-    </Container>
-  </Section>
+  <div>
+    <AboutContent />
+  </div>
 );

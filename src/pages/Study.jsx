@@ -1,11 +1,10 @@
 import React from 'react';
-import { Section, Container } from '../components/commons';
+import { withSiteData } from 'react-static';
+import StudyContent from '../components/content/Study-content';
+
 
 export default () => (
-  <Section>
-    <Container>
-      <h1>Study</h1>
-      <p>Info about studying</p>
-    </Container>
-  </Section>
+  <div>
+    <StudyContent />
+  </div>
 );
