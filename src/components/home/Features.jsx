@@ -67,6 +67,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   padding: 2em;
+  max-width: 1200px;
+  margin: auto;
 `
 
 const GridWrapper = styled.div`
