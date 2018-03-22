@@ -38,7 +38,8 @@ export default {
       getRoute('/contact', 'Contact'),
       getRoute('/about', 'About'),
       getRoute('/assessment', 'Assessment'),
-
+      getRoute('/business', 'Business'),
+      getRoute('/sponsorship', 'Sponsorship'),
       {
         is404: true,
         component: getPage('404'),

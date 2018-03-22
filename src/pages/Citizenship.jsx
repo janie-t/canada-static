@@ -1,11 +1,10 @@
 import React from 'react';
-import { Section, Container } from '../components/commons';
+import { withSiteData } from 'react-static';
+import CitizenshipContent from '../components/content/Citizenship-content';
+
 
 export default () => (
-  <Section>
-    <Container>
-      <h1>Citizenship</h1>
-      <p>Info about getting citizenship</p>
-    </Container>
-  </Section>
+  <div>
+    <CitizenshipContent />
+  </div>
 );

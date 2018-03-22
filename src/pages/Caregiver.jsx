@@ -1,11 +1,10 @@
 import React from 'react';
-import { Section, Container } from '../components/commons';
+import { withSiteData } from 'react-static';
+import CaregiverContent from '../components/content/Caregiver-content';
+
 
 export default () => (
-  <Section>
-    <Container>
-      <h1>Live-in caregivers</h1>
-      <p>Info for caregivers</p>
-    </Container>
-  </Section>
+  <div>
+    <CaregiverContent />
+  </div>
 );

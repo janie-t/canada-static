@@ -1,11 +1,10 @@
 import React from 'react';
-import { Section, Container } from '../components/commons';
+import { withSiteData } from 'react-static';
+import AsylumContent from '../components/content/Asylum-content';
+
 
 export default () => (
-  <Section>
-    <Container>
-      <h1>Asylum</h1>
-      <p>Information for asylum seekers</p>
-    </Container>
-  </Section>
+  <div>
+    <AsylumContent />
+  </div>
 );

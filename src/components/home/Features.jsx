@@ -14,12 +14,11 @@ const PURECLASSES = {
 
 const Grid = ({ items }) => (
   <FeatureGrid className={PURECLASSES.grid}>
-    {map(items, ({ heading, subheading, path }) => (
+    {map(items, ({ heading, path }) => (
         <Square key={heading} className={PURECLASSES.square}>
           <Icon src={Icons.leaf} alt="maple leaf" />
           <Link to={`/${path}`}>
             <Heading>{heading}</Heading>
-            <Subheading>{subheading}</Subheading>
           </Link>
         </Square>
 
@@ -60,11 +59,6 @@ const Heading = styled.div`
   margin-top: 5px;
   font-weight: bold;
   opacity: 0.7;
-`;
-
-const Subheading = styled.div`
-  font-size: 1em;
-  margin-top: 5px;
 `;
 
 export default withSiteData(() => {

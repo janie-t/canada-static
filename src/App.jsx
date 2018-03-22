@@ -3,6 +3,8 @@ import { Router } from 'react-static';
 import Routes from 'react-static-routes'; // eslint-disable-line
 import styled from 'react-emotion';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
+
 import './styles/main.css';
 
 const Container = styled.div`
@@ -21,6 +23,7 @@ export default () => (
     <Container>
       <Nav />
       <Routes />
+      <Footer />
     </Container>
   </Router>
 );
