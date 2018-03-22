@@ -22,7 +22,7 @@ const CLASSES = {
 const Section = styled.div`
   width: 100%;
   background-color: ${colors.DARKBLUE};
-  height: 80px;
+  height: 70px;
   z-index: -1;
   @media (min-width: 576px) {
     background-color: ${colors.WHITE};
@@ -34,7 +34,7 @@ const Logo = styled.img`
   width: 20%;
   position: absolute;
   left: 25px;
-  top: 25px;
+  top: 30px;
   @media (min-width: 576px) {
     width: 150px;
     position: relative;
@@ -106,8 +106,6 @@ const Menu = ({ items }) => (
   </div>
 );
 
-
-
 export default withSiteData(() => {
   const MENUS = content('menus');
   return (
@@ -116,6 +114,9 @@ export default withSiteData(() => {
         <NavLeft>
           <Menu items={MENUS} />
         </NavLeft>
+        <NavRight>
+          <Burger />
+        </NavRight>
       </Container>
     </Section>
   );

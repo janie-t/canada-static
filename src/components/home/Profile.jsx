@@ -17,7 +17,7 @@ const ProfileContainer = styled.div`
 const ProfileImage = styled.img`
   width: 50%;
   @media (min-width: 576px) {
-    width: 30%;
+    width: 50%;
   }
 `
 export default withSiteData(() => {

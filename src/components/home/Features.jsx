@@ -65,18 +65,27 @@ const Heading = styled.div`
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  padding: 2em;
-  max-width: 1200px;
+  flex-direction: column;
   margin: auto;
+  @media (min-width: 576px) {
+    flex-direction: row;
+    max-width: 1200px;
+    padding: 2em;
+  }
 `
 
 const GridWrapper = styled.div`
-  width: 70%;
+  width: 100%;
+  @media (min-width: 576px) {
+    width: 70%;
+  }
 `
 
 const ProfileWrapper = styled.div`
+width: 100%;
+@media (min-width: 576px) {
   width: 30%;
+}
 `
 
 export default withSiteData(() => {

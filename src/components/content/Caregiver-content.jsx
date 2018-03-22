@@ -13,9 +13,8 @@ const PURECLASSES = {
 };
 
 const Header = styled.div`
-  width: 100%;
-  height: 94vh;
-  background: ${colors.RED};
+display: none;
+
   @media (min-width: 576px) {
     background: url(${Images.canadaMountains}) no-repeat;
     height: 30vh;
@@ -24,9 +23,10 @@ const Header = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-@media (min-width: 576px) {
-  min-height: calc(100vh - 500px);
-}
+  min-height: calc(100vh - 250px);
+  @media (min-width: 576px) {
+    min-height: calc(100vh - 500px);
+  }
 `
 
 export default withSiteData(() => {
