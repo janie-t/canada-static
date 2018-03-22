@@ -116,9 +116,6 @@ export default withSiteData(() => {
         <NavLeft>
           <Menu items={MENUS} />
         </NavLeft>
-        <NavRight>
-          <Burger />
-        </NavRight>
       </Container>
     </Section>
   );

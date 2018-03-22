@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 
 import './styles/main.css';
+import Credentials from './components/home/Credentials';
 
 const Container = styled.div`
   position: absolute;
@@ -21,6 +22,7 @@ const Container = styled.div`
 export default () => (
   <Router>
     <Container>
+      <Credentials />
       <Nav />
       <Routes />
       <Footer />
