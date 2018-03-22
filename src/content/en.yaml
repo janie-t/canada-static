@@ -39,8 +39,10 @@ pages:
   Settle: Settle
   Legal: Legal Help
 credentials:
-  address: +1 (000) 000-0000 or Toll-free (Canada & US) +1 (000) 000-000 |
+  address: +1 (000) 000-0000 or Toll-free Canada
+  home: Home
   contact: Contact
+  about: About Us
   error:
     text: 404 - Oh no's! We couldn't find that page :(
 
