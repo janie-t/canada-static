@@ -9,6 +9,7 @@ import snow from './images/snow.jpeg';
 import vancouverDay from './images/vancouver-day.jpeg';
 import vancouverNight from './images/vancouver-night.jpg';
 import profile from './images/profile.JPG';
+import vancouverNightSmall from './images/vancouver-night-small.jpg';
 
 
 const Images = {
@@ -21,7 +22,8 @@ const Images = {
   snow,
   vancouverDay,
   vancouverNight,
-  profile
+  profile,
+  vancouverNightSmall
 };
 const Icons = {
   leaf,

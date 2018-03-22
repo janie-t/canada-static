@@ -3,9 +3,11 @@ import { withSiteData, Link } from 'react-static';
 import styled, { css } from 'react-emotion';
 import { map } from 'lodash';
 import content from '../../content';
-import { Section, Container } from '../commons';
+import { Section } from '../commons';
 import { Icons } from '../../assets';
 import colors from '../../styles/colors';
+import Profile from './Profile';
+
 
 const PURECLASSES = {
   grid: 'pure-g',
@@ -61,12 +63,42 @@ const Heading = styled.div`
   opacity: 0.7;
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  @media (min-width: 576px) {
+    flex-direction: row;
+    max-width: 1200px;
+    padding: 2em;
+  }
+`
+
+const GridWrapper = styled.div`
+  width: 100%;
+  @media (min-width: 576px) {
+    width: 70%;
+  }
+`
+
+const ProfileWrapper = styled.div`
+width: 100%;
+@media (min-width: 576px) {
+  width: 30%;
+}
+`
+
 export default withSiteData(() => {
   const FEATURES = content('pages.home.features');
   return (
     <Section>
       <Container>
-        <Grid className={PURECLASSES.grid} items={FEATURES} />
+        <GridWrapper>
+          <Grid className={PURECLASSES.grid} items={FEATURES} />
+        </GridWrapper>
+        <ProfileWrapper>
+          <Profile />
+        </ProfileWrapper>
       </Container>
     </Section>
   );

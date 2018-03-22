@@ -87,6 +87,24 @@ padding: 1rem 2rem;
 }
 `;
 
+const MobileImage = styled.img`
+  width: 100%;
+  margin-top: 2em;
+  @media (min-width: 576px) {
+    display: none;
+  }
+`
+
+const LandingText = styled.div`
+  text-align: center;
+  font-size: 1.3em;
+  color: white;
+  margin-top: 0.7em;
+  @media (min-width: 576px) {
+    display: none;
+  }
+`
+
 export default withSiteData(() => {
   return (
   <Section>
@@ -100,6 +118,8 @@ export default withSiteData(() => {
           <Contact>Contact Us</Contact>
         </Link>
       </ActionButtons>
+      <MobileImage src={Images.vancouverNightSmall}/>
+      <LandingText>For help and advice on Canadian immigration processes</LandingText>
     </Container>
   </Section>
 )
