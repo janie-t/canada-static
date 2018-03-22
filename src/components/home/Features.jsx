@@ -66,6 +66,7 @@ const Heading = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+  padding: 2em;
 `
 
 const GridWrapper = styled.div`
