@@ -7,7 +7,7 @@ import { Section } from '../commons';
 import { Icons } from '../../assets';
 import colors from '../../styles/colors';
 import Profile from './Profile';
-
+import SideNav from '../SideNav';
 
 const PURECLASSES = {
   grid: 'pure-g',
@@ -77,7 +77,7 @@ const Container = styled.div`
 const GridWrapper = styled.div`
   width: 100%;
   @media (min-width: 576px) {
-    width: 70%;
+    width: 40%;
   }
 `
 
@@ -87,12 +87,19 @@ width: 100%;
   width: 30%;
 }
 `
+const SideMenuWrapper = styled.div`
+width: 100%;
+@media (min-width: 576px) {
+width: 30%;
+}
+`
 
 export default withSiteData(() => {
   const FEATURES = content('pages.home.features');
   return (
     <Section>
       <Container>
+        <SideMenuWrapper>< SideNav /></SideMenuWrapper>
         <GridWrapper>
           <Grid className={PURECLASSES.grid} items={FEATURES} />
         </GridWrapper>

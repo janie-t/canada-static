@@ -22,7 +22,7 @@ const CLASSES = {
 const Section = styled.div`
   width: 100%;
   background-color: ${colors.DARKBLUE};
-  height: 70px;
+  height: 50px;
   z-index: -1;
   @media (min-width: 576px) {
     background-color: ${colors.WHITE};

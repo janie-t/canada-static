@@ -14,13 +14,19 @@ const Heading = styled.div`
   padding-top: 1em;
   @media (min-width: 576px) {
     background-color: ${colors.WHITE};
-    color: black;
+    color:  #009edb;
     font-size: 1em;
     padding-top: 2em;
-    text-align: right;
+    text-align: center;
     margin-right: 2em;
   }
 `;
+
+const StyledLink = styled(Link)`
+  color: 009edb;
+  // font-weight: bold;
+`;
+
 
 export default withSiteData(() => {
   const CRED = content('credentials.address');

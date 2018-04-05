@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import { Images } from '../../assets';
 import content from '../../content';
 import colors from '../../styles/colors';
-
+import { StyledButton, Signup } from '../commons';
 const HOME = content('pages.home');
 
 const Section = styled.div`
@@ -38,54 +38,6 @@ const ActionButtons = styled.div`
   }
 `;
 
-const Signup = styled.button`
-width: 80%;
-margin: auto;
-text-transform: uppercase;
-transition: background-color 200ms ease, color 200ms ease;
-background-color: ${colors.RED};
-color: ${colors.WHITE};
-border: 1px solid ${colors.WHITE};
-padding: 1rem 2rem;
-margin-bottom: 0.5em;
-border-radius: 5px;
-&:hover {
-  background-color: ${colors.WHITE};
-  color: ${colors.RED};
-  border: 1px solid ${colors.RED};
-}
-@media (min-width: 576px) {
-  background: ${colors.RED};
-  color: white;
-  width: 100%;
-  margin-bottom: 30px;
-  &:hover {
-    background-color: white;
-    color: ${colors.DARKBLUE};
-    border: 1px solid ${colors.BLUE};
-  }
-}
-`;
-
-const Contact = styled.button`
-width: 80%;
-margin: auto;
-background: ${colors.DARKBLUE};
-transition: background-color 200ms ease, color 200ms ease;
-color: ${colors.WHITE};
-font-size: 1.1em;
-letter-spacing: 1px;
-border-radius: 5px;
-border: 1px solid ${colors.WHITE};
-padding: 1rem 2rem;
-&:hover {
-  background-color: white;
-  color: ${colors.DARKBLUE};
-}
-@media (min-width: 576px) {
-  width: 100%;
-}
-`;
 
 const MobileImage = styled.img`
   width: 100%;
@@ -115,7 +67,7 @@ export default withSiteData(() => {
         </Link>
         <br />
         <Link to="/contact">
-          <Contact>Contact Us</Contact>
+          <StyledButton>Contact Us</StyledButton>
         </Link>
       </ActionButtons>
       <MobileImage src={Images.vancouverNightSmall}/>

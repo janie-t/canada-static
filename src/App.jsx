@@ -5,6 +5,7 @@ import styled from 'react-emotion';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
+
 import './styles/main.css';
 import Credentials from './components/home/Credentials';
 
@@ -24,6 +25,7 @@ export default () => (
     <Container>
       <Credentials />
       <Nav />
+      
       <Routes />
       <Footer />
     </Container>
