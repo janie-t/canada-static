@@ -13,8 +13,7 @@ const PURECLASSES = {
 };
 
 const Header = styled.div`
-display: none;
-
+  display: none;
   @media (min-width: 576px) {
     background: url(${Images.vancouverDay}) no-repeat;
     height: 30vh;
