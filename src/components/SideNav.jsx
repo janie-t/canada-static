@@ -80,8 +80,8 @@ const StyledLink = styled(Link) `
 `;
 
 const MenuLink = styled(Link)`
-  margin: 1rem 0;
-  background: rgb(202, 60, 60);
+  margin: 0.1rem 0;
+  background: rgb(255, 0, 0);
   color: white;
   border-radius: 20px;
   &:hover{

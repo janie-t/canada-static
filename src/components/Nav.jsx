@@ -26,7 +26,7 @@ const Section = styled.div`
   z-index: -1;
   @media (min-width: 576px) {
     background-color: ${colors.WHITE};
-    height: 150px;
+    height: 100px;
   }
 `;
 

@@ -9,7 +9,7 @@ const Section = styled.section`
 const Container = styled.div`
   margin: auto;
   max-width: 80%;
-  padding-top: 2em;
+  padding-top: 0em;
   @media (min-width: 576px) {
     max-width: 970px;
   }

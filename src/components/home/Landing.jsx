@@ -23,7 +23,11 @@ const Container = styled.div`
   background-image: ${colors.RED};
   @media (min-width: 576px) {
     max-width: 976px;
-    margin: auto;
+    position: absolute;
+    right:10%;
+    top:40%;
+    transform:translateY(-50%);
+
   }
 `;
 
