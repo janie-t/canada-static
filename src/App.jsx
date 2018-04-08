@@ -4,8 +4,8 @@ import Routes from 'react-static-routes'; // eslint-disable-line
 import styled from 'react-emotion';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-
-
+import Profile from './components/Profile'
+import SideNav from './components/SideNav';
 import './styles/main.css';
 import Credentials from './components/home/Credentials';
 
@@ -27,6 +27,9 @@ export default () => (
       <Nav />
       
       <Routes />
+      <Profile />
+
+      <SideNav />
       <Footer />
     </Container>
   </Router>

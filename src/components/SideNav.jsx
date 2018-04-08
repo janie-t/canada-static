@@ -100,42 +100,16 @@ const NavRight = styled.div`
   justify-content: center;
 `;
 
-const MenuButton = styled.button`
-  width: 80%;
-  margin-bottom: 0.1em;
-  top: calc(50% - 30px);
-	right: calc(50% - 115px);
-	width: 230px;
-	height: 60px;
-	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.075), rgba(255,255,255,.045));
-	background-image: linear-gradient(to top, rgba(255,0,0), rgba(255,0,0));
-    box-shadow: inset 0 -1px 0 rgba(0,0,0),inset 0 1px 0 rgba(0,0,0), 0 0 1px rgba(0,0,0), 0 0 10px rgba(0,0,0);
-	border-radius: 100px;
-	color: ${colors.WHITE};
-	line-height: 30px;
-	text-align: center;
-	letter-spacing: 1px;
-	overflow: hidden;
-	transition: all .3s cubic-bezier(.67,.13,.1,.81), transform .15s cubic-bezier(.67,.13,.1,.81);
-
-& hover {
-	right: calc(50% - 150px);
-	width: 400px;
-}
-&:active {
-	transform: translateY(3px);
-}
-&: before {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	transition: all .3s cubic-bezier(.67,.13,.1,.81);
+const SideMenuWrapper = styled.div`
+width: 100%;
+@media (min-width: 576px) {
+width: 30%;
+position: absolute;
+left:7%;
+top:40%;
+transform:translateY(50%);
 }
 `
-
 
 const Menu = ({ items }) => (
   <div className={CLASSES.menu}>
@@ -153,14 +127,14 @@ export default withSiteData(() => {
   const MENUS = content('menus');
   return (
     <Section className={CLASSES.section}>
+    <SideMenuWrapper>
       <Container className={CLASSES.container} style={{ display: 'flex' }}>
         <NavLeft>
           <Menu items={MENUS} />
         </NavLeft>
-        <NavRight>
-          <Burger />
-        </NavRight>
+      
       </Container>
+      </SideMenuWrapper>
     </Section>
   );
 });

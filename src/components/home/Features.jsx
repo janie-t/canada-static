@@ -6,8 +6,7 @@ import content from '../../content';
 import { Section } from '../commons';
 import { Icons } from '../../assets';
 import colors from '../../styles/colors';
-import Profile from './Profile';
-import SideNav from '../SideNav';
+// import SideNav from '../SideNav';
 
 const PURECLASSES = {
   grid: 'pure-g',
@@ -77,35 +76,40 @@ const Container = styled.div`
 const GridWrapper = styled.div`
   width: 100%;
   @media (min-width: 576px) {
+    position: absolute;
     width: 40%;
+    top: 100%;
+    left: 25%;
+    transform:translateY(-50%);
+
   }
 `
 
-const ProfileWrapper = styled.div`
-width: 100%;
-@media (min-width: 576px) {
-  width: 30%;
-}
-`
-const SideMenuWrapper = styled.div`
-width: 100%;
-@media (min-width: 576px) {
-width: 30%;
-}
-`
+// const ProfileWrapper = styled.div`
+// width: 100%;
+// @media (min-width: 576px) {
+//   width: 30%;
+// }
+// `
+// const SideMenuWrapper = styled.div`
+// width: 100%;
+// @media (min-width: 576px) {
+// width: 30%;
+// }
+// `
 
 export default withSiteData(() => {
   const FEATURES = content('pages.home.features');
   return (
     <Section>
       <Container>
-        <SideMenuWrapper>< SideNav /></SideMenuWrapper>
+        {/* <SideMenuWrapper>< SideNav /></SideMenuWrapper> */}
         <GridWrapper>
           <Grid className={PURECLASSES.grid} items={FEATURES} />
         </GridWrapper>
-        <ProfileWrapper>
+        {/* <ProfileWrapper>
           <Profile />
-        </ProfileWrapper>
+        </ProfileWrapper> */}
       </Container>
     </Section>
   );

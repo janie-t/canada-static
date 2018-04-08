@@ -19,6 +19,8 @@ const Background = styled.div`
     padding-top: 20px;
     position: relative;
     bottom: 0;
+    margin-top : 10%;
+    
   };
 `;
 
