@@ -6,6 +6,7 @@ import content from '../../content';
 import { Section } from '../commons';
 import { Icons } from '../../assets';
 import colors from '../../styles/colors';
+import Profile from './Profile';
 // import SideNav from '../SideNav';
 
 const PURECLASSES = {
@@ -16,19 +17,18 @@ const PURECLASSES = {
 const Grid = ({ items }) => (
   <FeatureGrid className={PURECLASSES.grid}>
     {map(items, ({ heading, path }) => (
-        <Square key={heading} className={PURECLASSES.square}>
-          <Icon src={Icons.leaf} alt="maple leaf" />
-          <Link to={`/${path}`}>
-            <Heading>{heading}</Heading>
-          </Link>
-        </Square>
-
+      <Square key={heading} className={PURECLASSES.square}>
+        <Icon src={Icons.leaf} alt="maple leaf" />
+        <Link to={`/${path}`}>
+          <Heading>{heading}</Heading>
+        </Link>
+      </Square>
     ))}
   </FeatureGrid>
 );
 
 const FeatureGrid = styled.div`
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 `;
 
 const Square = styled.div`
@@ -40,8 +40,8 @@ const Square = styled.div`
   margin: 20px auto 0;
   color: ${colors.RED};
   @media (min-width: 576px) {
-    margin-top: 50px;
-    padding: 1em;
+    margin-top: 10px;
+    padding: 0.5em;
     max-width: 100%;
   }
 `;
@@ -50,7 +50,7 @@ const Icon = styled.img`
   border-radius: 10%;
   width: 50px;
   @media (min-width: 576px) {
-    width: 100px;
+    width: 50px;
   }
 `;
 
@@ -69,21 +69,38 @@ const Container = styled.div`
   @media (min-width: 576px) {
     flex-direction: row;
     max-width: 1200px;
-    padding: 2em;
+    padding: 1em;
   }
-`
+`;
 
 const GridWrapper = styled.div`
   width: 100%;
   @media (min-width: 576px) {
-    position: absolute;
-    width: 40%;
-    top: 100%;
-    left: 25%;
-    transform:translateY(-50%);
-
+    width: 50%;
   }
-`
+`;
+
+const LandingText = styled.div`
+  text-align: center;
+  font-size: 1.3em;
+  color: black;
+  margin-top: 0.5em;
+  @media (min-width: 576px) {
+    font-size: 2.5em;
+    max-width: 650px;
+    margin: auto;
+    padding-left: 4em;
+    padding-bottom: 4em;
+    padding-top: 2em;
+  }
+`;
+
+const ProfileWrapper = styled.div`
+  width: 100%;
+  @media (min-width: 576px) {
+    width: 30%;
+  }
+`;
 
 // const ProfileWrapper = styled.div`
 // width: 100%;
@@ -103,13 +120,15 @@ export default withSiteData(() => {
   return (
     <Section>
       <Container>
+        <LandingText>For help and advice on Canadian immigration processes</LandingText>
+
         {/* <SideMenuWrapper>< SideNav /></SideMenuWrapper> */}
         <GridWrapper>
           <Grid className={PURECLASSES.grid} items={FEATURES} />
         </GridWrapper>
-        {/* <ProfileWrapper>
+        <ProfileWrapper>
           <Profile />
-        </ProfileWrapper> */}
+        </ProfileWrapper>
       </Container>
     </Section>
   );

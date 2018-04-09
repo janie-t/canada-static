@@ -24,7 +24,9 @@ const Section = styled.div`
   background-color: ${colors.DARKBLUE};
   height: 50px;
   z-index: -1;
+  display: none;
   @media (min-width: 576px) {
+    display: inline;
     background-color: ${colors.WHITE};
     height: 150px;
   }
@@ -47,8 +49,7 @@ const Logo = styled.img`
   }
 `;
 
-
-const StyledLink = styled(Link) `
+const StyledLink = styled(Link)`
   display: none;
   padding: 0;
   margin: 0 1rem;
@@ -84,8 +85,8 @@ const MenuLink = styled(Link)`
   background: rgb(255, 0, 0);
   color: white;
   border-radius: 20px;
-  &:hover{
-    background: rgba(202, 60, 60, .5);
+  &:hover {
+    background: rgba(202, 60, 60, 0.5);
   }
 `;
 
@@ -101,22 +102,27 @@ const NavRight = styled.div`
 `;
 
 const SideMenuWrapper = styled.div`
-width: 100%;
-@media (min-width: 576px) {
-width: 30%;
-position: absolute;
-left:7%;
-top:40%;
-transform:translateY(50%);
-}
-`
+  width: 100%;
+  display: none;
+  @media (min-width: 576px) {
+    display: block;
+    width: 30%;
+    position: absolute;
+    left: 7%;
+    top: 40%;
+    transform: translateY(50%);
+  }
+`;
 
 const Menu = ({ items }) => (
   <div className={CLASSES.menu}>
-      <ul className={CLASSES.menuList}>
+    <ul className={CLASSES.menuList}>
       {map(items, (label, path) => (
         <li key={`menu_${path}`} className={CLASSES.menuItem}>
-          <MenuLink to={`${path}`} className={CLASSES.menuLink}> {label}</MenuLink>
+          <MenuLink to={`${path}`} className={CLASSES.menuLink}>
+            {' '}
+            {label}
+          </MenuLink>
         </li>
       ))}
     </ul>
@@ -127,13 +133,12 @@ export default withSiteData(() => {
   const MENUS = content('menus');
   return (
     <Section className={CLASSES.section}>
-    <SideMenuWrapper>
-      <Container className={CLASSES.container} style={{ display: 'flex' }}>
-        <NavLeft>
-          <Menu items={MENUS} />
-        </NavLeft>
-      
-      </Container>
+      <SideMenuWrapper>
+        <Container className={CLASSES.container} style={{ display: 'flex' }}>
+          <NavLeft>
+            <Menu items={MENUS} />
+          </NavLeft>
+        </Container>
       </SideMenuWrapper>
     </Section>
   );

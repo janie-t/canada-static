@@ -2,14 +2,12 @@ import React from 'react';
 import { withSiteData, Link } from 'react-static';
 import styled from 'react-emotion';
 import { Images } from '../../assets';
-import content from '../../content';
 import colors from '../../styles/colors';
-import { StyledButton, Signup } from '../commons';
-const HOME = content('pages.home');
+import { StyledButton } from '../commons';
 
 const Section = styled.div`
   width: 100%;
-  height: 94vh;
+  height: 70vh;
   background: ${colors.RED};
   @media (min-width: 576px) {
     background: url(${Images.vancouverNight}) no-repeat;
@@ -24,10 +22,9 @@ const Container = styled.div`
   @media (min-width: 576px) {
     max-width: 976px;
     position: absolute;
-    right:10%;
-    top:40%;
-    transform:translateY(-50%);
-
+    right: 10%;
+    top: 30%;
+    transform: translateY(-50%);
   }
 `;
 
@@ -36,12 +33,10 @@ const ActionButtons = styled.div`
   padding-top: 1em;
   text-align: center;
   @media (min-width: 576px) {
-    padding-top: 1em;
-    padding-left: 1em;
     text-align: right;
+    margin-bottom: 20px;
   }
 `;
-
 
 const MobileImage = styled.img`
   width: 100%;
@@ -49,34 +44,21 @@ const MobileImage = styled.img`
   @media (min-width: 576px) {
     display: none;
   }
-`
+`;
 
-const LandingText = styled.div`
-  text-align: center;
-  font-size: 1.3em;
-  color: white;
-  margin-top: 0.7em;
-  @media (min-width: 576px) {
-    display: none;
-  }
-`
-
-export default withSiteData(() => {
-  return (
+export default withSiteData(() => (
   <Section>
     <Container>
       <ActionButtons>
         <Link to="/assessment">
-          <Signup>Free Assessment</Signup>
+          <StyledButton>Free Assessment</StyledButton>
         </Link>
         <br />
         <Link to="/contact">
           <StyledButton>Contact Us</StyledButton>
         </Link>
       </ActionButtons>
-      <MobileImage src={Images.vancouverNightSmall}/>
-      <LandingText>For help and advice on Canadian immigration processes</LandingText>
+      <MobileImage src={Images.vancouverNightSmall} />
     </Container>
   </Section>
-)
-})
+));
