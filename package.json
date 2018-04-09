@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "react-static start",
+    "dist" : "surge --domain static2.surge.sh",
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
